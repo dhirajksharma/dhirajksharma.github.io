@@ -48,7 +48,7 @@ class Projects extends React.Component{
               tag="React.JS jQuery TailwindCSS"
               title="My Portfolio"
               body="Well, you are currently here! A single place to showcase my skills, the projects I have worked upon, the work experiences I have and a peek at my resume!"
-              link="https://dhirjksharma.github.io/"
+              link="https://dhirajksharma.github.io/"
               />
               <CardsLeft
               img="https://github.com/dhirajksharma/reactgames/blob/main/src/logo.png?raw=true"
@@ -62,7 +62,7 @@ class Projects extends React.Component{
               tag="JavaScript jQuery"
               title="Poké Duel"
               body="A Basic Pokémon game where 2 players choose their Pokémons from a randomly generated group and duel against each other. The Pokémon with more power remaining at the end of the duel, wins!"
-              link="https://dhirjksharma.github.io/pokeduel/"
+              link="https://dhirajksharma.github.io/pokeduel/"
               />
               </div>
             </div>
