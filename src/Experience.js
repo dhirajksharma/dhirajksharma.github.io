@@ -39,7 +39,7 @@ class Experience extends React.Component{
             </button>
             <div id="Experience" className="hidden font-mono">
             <div className="flex flex-col items-center ">
-              <img src={searchimg} className="w-2/3 max-w-xl"></img>
+              <img src={searchimg} className="w-2/3 max-w-xl text-xl"></img>
             Looking Out For Some
             </div>
             </div>
