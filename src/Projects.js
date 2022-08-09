@@ -44,7 +44,7 @@ class Projects extends React.Component{
               <div className="relative container mx-auto px-6 flex flex-col space-y-8 lg:w-4/5">
               <div className="absolute z-0 w-2 h-[90%] rounded-md bg-blue-400 shadow-md inset-0 left-17 md:left-0 md:right-0 md:mx-auto"></div>
               <Cards
-              img="https://images.pexels.com/photos/3223552/pexels-photo-3223552.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100"
+              img="https://github.com/dhirajksharma/dhirajksharma.github.io/blob/main/public/android-chrome-384x384.png?raw=true"
               tag="React.JS jQuery TailwindCSS"
               title="My Portfolio"
               body="Well, you are currently here! A single place to showcase my skills, the projects I have worked upon, the work experiences I have and a peek at my resume!"

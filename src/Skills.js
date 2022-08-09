@@ -40,16 +40,16 @@ class Skills extends React.Component{
             </button>
             <div id="Skills" className="hidden w-11/12 max-w-2xl">
             <div className="flex flex-wrap justify-center ">
-            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-cplusplus-plain font-medium text-xl p-2">C++</i></div>
-            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-css3-plain font-medium text-xl p-2">CSS</i></div>
-            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-express-original font-medium text-xl p-2">Express.js</i></div>
-            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-git-plain font-medium text-xl p-2">Git</i></div>
-            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-html5-plain font-medium text-xl p-2">HTML5</i></div>
-            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-javascript-plain font-medium text-xl p-2">JavaScript</i></div>
-            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-jquery-plain font-medium text-xl p-2">jQuery</i></div>
-            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-nodejs-plain font-medium text-xl p-2">Node.js</i></div>
-            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-react-original font-medium text-xl p-2">React.js</i></div>
-            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-tailwindcss-plain font-medium text-xl p-2">TailwindCSS</i></div>
+            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-cplusplus-plain font-medium text-base sm:text-xl p-2">C++</i></div>
+            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-css3-plain font-medium text-base sm:text-xl p-2">CSS</i></div>
+            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-express-original font-medium text-base sm:text-xl p-2">Express.js</i></div>
+            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-git-plain font-medium text-base sm:text-xl p-2">Git</i></div>
+            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-html5-plain font-medium text-base sm:text-xl p-2">HTML5</i></div>
+            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-javascript-plain font-medium text-base sm:text-xl p-2">JavaScript</i></div>
+            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-jquery-plain font-medium text-base sm:text-xl p-2">jQuery</i></div>
+            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-nodejs-plain font-medium text-base sm:text-xl p-2">Node.js</i></div>
+            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-react-original font-medium text-base sm:text-xl p-2">React.js</i></div>
+            <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class="devicon-tailwindcss-plain font-medium text-base sm:text-xl p-2">TailwindCSS</i></div>
             </div>
             </div>
           </div>
