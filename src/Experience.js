@@ -8,7 +8,7 @@ class Experience extends React.Component{
     }
     handleToggle(evt){
         let tabclicked=evt.target.value;
-      ["Projects","Education","Skills","Experience"].map(tb => {
+      ["Projects","Resume","Skills","Experience"].map(tb => {
           if(tb===tabclicked)
             $(`#${tb}`).slideToggle();
           else
