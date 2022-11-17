@@ -34,7 +34,7 @@ class Tab extends React.Component{
         return ["Skills","Projects","Experience", "Resume"].map(ltr => (
           <button
             value={ltr}
-            className="bg-[rgb(42,50,53,255)] text-white my-3 w-3/4 h-12 rounded-xl hover:w-[78%] hover:h-[3.2rem] ease-in duration-200 sm:w-28 sm:h-10 sm:rounded-lg sm:hover:w-28 sm:hover:h-10 sm:mx-8 sm:hover:-translate-y-1 hover:bg-blue-400 active:bg-blue-400"
+            className="tabtn"
             onClick={this.handleTabClick}
           >
             {ltr}

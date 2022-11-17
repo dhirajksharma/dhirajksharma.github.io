@@ -2,6 +2,7 @@ import React from "react";
 import $ from "jquery";
 import Cards from "./Cards";
 import CardsLeft from "./CardsLeft";
+import {projectData} from "./Data.js";
 
 class Projects extends React.Component{
     constructor(props) {
@@ -34,7 +35,7 @@ class Projects extends React.Component{
             <button
             id="Projects-btn"
             value="Projects"
-            className="bg-[rgb(42,50,53,255)] text-white my-3 w-3/4 h-12 rounded-xl hover:w-[78%] hover:h-[3.2rem] ease-in duration-200 hover:bg-blue-400 active:bg-blue-400 sm:hidden"
+            className="tabtnlite"
             onClick={this.handleToggle}
             >
                 Projects
@@ -42,27 +43,26 @@ class Projects extends React.Component{
             <div id="Projects" className="hidden sm:mt-5">
               <div className="relative container mx-auto px-6 flex flex-col space-y-8 lg:w-4/5">
               <div className="absolute z-0 w-2 h-[90%] rounded-md bg-blue-400 shadow-md inset-0 left-17 md:left-0 md:right-0 md:mx-auto"></div>
-              <Cards
-              img="https://github.com/dhirajksharma/dhirajksharma.github.io/blob/main/public/android-chrome-384x384.png?raw=true"
-              tag="React.JS jQuery TailwindCSS"
-              title="My Portfolio"
-              body="Well, you are currently here! A single place to showcase my skills, the projects I have worked upon, the work experiences I have and a peek at my resume!"
-              link="https://dhirajksharma.github.io/"
-              />
-              <CardsLeft
-              img="https://github.com/dhirajksharma/reactgames/blob/main/src/logo.png?raw=true"
-              tag="React.JS"
-              title="React Games"
-              body="A set of simple games built using React.js. Games currently include Hangman, and Lights Out, with Yahtzee soon to be added."
-              link="https://dhirajksharma.github.io/reactgames/"
-              />
-              <Cards
-              img="https://github.com/dhirajksharma/pokeduel/blob/main/res/pokeball.png?raw=true"
-              tag="JavaScript jQuery"
-              title="Poké Duel"
-              body="A Basic Pokémon game where 2 players choose their Pokémons from a randomly generated group and duel against each other. The Pokémon with more power remaining at the end of the duel, wins!"
-              link="https://dhirajksharma.github.io/pokeduel/"
-              />
+              {
+                projectData.map(obj=>{
+                  if(obj.itr%2===0)
+                    return <Cards
+                    img={obj.img}
+                    tag={obj.tag}
+                    title={obj.title}
+                    body={obj.body}
+                    link={obj.link}
+                    />
+                  else
+                  return <CardsLeft
+                  img={obj.img}
+                  tag={obj.tag}
+                  title={obj.title}
+                  body={obj.body}
+                  link={obj.link}
+                  />
+                })
+              }
               </div>
             </div>
           </div>

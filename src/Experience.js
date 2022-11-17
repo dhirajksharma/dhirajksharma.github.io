@@ -32,13 +32,13 @@ class Experience extends React.Component{
             <button
             id="Experience-btn"
             value="Experience"
-            className="bg-[rgb(42,50,53,255)] text-white my-3 w-3/4 h-12 rounded-xl hover:w-[78%] hover:h-[3.2rem] ease-in duration-200 hover:bg-blue-400 active:bg-blue-400 sm:hidden"
+            className="tabtnlite"
             onClick={this.handleToggle}
             >
                 Experience
             </button>
             <div id="Experience" className="hidden font-mono">
-            <div className="flex flex-col items-center ">
+            <div className="flex flex-col items-center dark:text-white">
               <img src={searchimg} className="w-2/3 max-w-xl text-xl"></img>
             Looking Out For Some
             </div>

@@ -32,7 +32,7 @@ class Resume extends React.Component{
             <button
             id="Resume-btn"
             value="Resume"
-            className="tabs bg-[rgb(42,50,53,255)] text-white my-3 w-3/4 h-12 rounded-xl hover:w-[78%] hover:h-[3.2rem] ease-in duration-200 hover:bg-blue-400 active:bg-blue-400 sm:hidden"
+            className="tabtnlite"
             onClick={this.handleToggle}
             >
                 Resume
