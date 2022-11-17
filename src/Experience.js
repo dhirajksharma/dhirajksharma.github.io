@@ -1,6 +1,6 @@
 import React from "react";
 import $ from "jquery";
-import searchimg from "./search.jpg";
+import searchimg from "./search.png";
 class Experience extends React.Component{
     constructor(props) {
         super(props);
