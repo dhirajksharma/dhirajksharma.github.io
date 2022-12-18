@@ -21,7 +21,7 @@ class Cards extends React.Component{
                     <div class="bg-slate-100 p-4 xs:p-6 rounded-md shadow-md">
                         <span class="font-medium text-indigo-600 text-sm tracking-wide">{this.props.tag}</span>
                         <h1 class="text-xl xs:text-2xl font-bold pt-1">{this.props.title}</h1>
-                        <p class="pt-1 text-sm xs:text-base font-mono tracking-tight">
+                        <p class="pt-1 text-sm xs:text-base font-montserrat tracking-wide">
                             {this.props.body}
                         </p>
                         <a href={this.props.link} target="_blank">

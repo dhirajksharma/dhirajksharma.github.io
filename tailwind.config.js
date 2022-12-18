@@ -14,7 +14,10 @@ module.exports = {
       inset: {
         '17': '68px',
         '26': '104px'
-      }
+      },
+      fontFamily: {
+        'montserrat': ['Montserrat'],
+      },
     },
   },
   plugins: [],

@@ -41,7 +41,7 @@ export const skillData=[
 export const projectData=[
     {
         itr:0,
-        img:"https://drive.google.com/uc?id=1CMJL0asTZnvWx9L3-fkK3SBPmEJDg-lu",
+        img:"https://github.com/dhirajksharma/thelorestore-frontend/blob/main/public/android-chrome-512x512.png?raw=true",
         tag:"MongoDB Express.JS React.JS TailwindCSS",
         title:"The Lore Store",
         body:"An online Book Store built using the MERN stack and styled using TailwindCSS.",
@@ -49,7 +49,7 @@ export const projectData=[
     },
     {
         itr:1,
-        img:"https://drive.google.com/uc?id=1KHJFyem_abXdYYCdE2cIS67VPQQUXt8p",
+        img:"https://github.com/dhirajksharma/reactgames/blob/main/src/logo.png?raw=true",
         tag:"React.JS",
         title:"React Games",
         body:"A set of simple games built using React.js. Games currently include Hangman, and Lights Out, with Yahtzee soon to be added.",
@@ -57,7 +57,7 @@ export const projectData=[
     },
     {
         itr:2,
-        img:"https://drive.google.com/uc?id=1-eATZoOiNDWfKc1oBaLG4FkBWRgkAjSM",
+        img:"https://github.com/dhirajksharma/pokeduel/blob/main/res/pokeball.png?raw=true",
         tag:"JavaScript jQuery",
         title:"Poké Duel",
         body:"A Basic Pokémon game where 2 players choose their Pokémons and duel against each other. The Pokémon with more power remaining at the end of the duel, wins!",
