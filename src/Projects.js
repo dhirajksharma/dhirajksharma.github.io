@@ -56,7 +56,7 @@ class Projects extends React.Component{
             >
                 Projects
             </button>
-            <div id="Projects" className="hidden sm:mt-5">
+            <div id="Projects" className="hidden sm:mt-5 overflow-hidden">
               <div className="relative container mx-auto px-6 flex flex-col space-y-8 lg:w-4/5">
               <div id="bar" className="absolute z-0 w-2 h-[90%] rounded-md bg-blue-400 shadow-md inset-0 left-17 md:left-0 md:right-0 md:mx-auto"></div>
               {
