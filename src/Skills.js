@@ -8,14 +8,31 @@ class Skills extends React.Component{
         super(props);
         this.handleToggle=this.handleToggle.bind(this);
     }
+    componentDidMount(){
+      const observer=new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+          if(entry.isIntersecting){
+            entry.target.classList.add('skillshow');
+          }else{
+            entry.target.classList.remove('skillshow');
+          }
+        })
+      })
+
+      document.querySelectorAll('.skillhidden').forEach((el,i)=>{
+        el.style.transitionDelay = i * 300 + "ms";
+        observer.observe(el)
+      });
+    }
+
     handleToggle(evt){
         let tabclicked=evt.target.value;
       ["Projects","Resume","Skills","Experience"].map(tb => {
           if(tb===tabclicked) {
-            $(`#${tb}`).slideToggle();
+            $(`#${tb}`).slideToggle('slow');
           }
           else
-            $(`#${tb}`).slideUp();
+            $(`#${tb}`).slideUp('slow');
       });
       [...document.querySelectorAll(".tabs")].map(btn => {
         if(btn.value===tabclicked) {
@@ -43,7 +60,7 @@ class Skills extends React.Component{
             <div id="Skills" className="hidden w-11/12 max-w-2xl">
             <div className="flex flex-wrap justify-center ">
             {skillData.map(obj=>(
-              <div className="bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class={obj.classlist}>{obj.skill}</i></div>
+              <div className="skillhidden bg-gray-200 w-max rounded-xl inline-flex m-2 items-center"><i class={obj.classlist}>{obj.skill}</i></div>
             ))}
             </div>
             </div>

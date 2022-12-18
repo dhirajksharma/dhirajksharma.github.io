@@ -9,10 +9,11 @@ class Experience extends React.Component{
     handleToggle(evt){
         let tabclicked=evt.target.value;
       ["Projects","Resume","Skills","Experience"].map(tb => {
-          if(tb===tabclicked)
-            $(`#${tb}`).slideToggle();
-          else
-            $(`#${tb}`).slideUp();
+        if(tb===tabclicked) {
+          $(`#${tb}`).slideToggle('slow');
+        }
+        else
+          $(`#${tb}`).slideUp('slow');
       });
       [...document.querySelectorAll(".tabs")].map(btn => {
         if(btn.value===tabclicked) {

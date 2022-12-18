@@ -1,3 +1,47 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -27,10 +71,10 @@
         @apply mt-5 mb-3 mx-1 hover:text-blue-500 hover:-translate-y-1 transition-all dark:hover:text-white;
     }
     .tabtn{
-        @apply bg-[rgb(42,50,53,255)] text-white my-3 w-3/4 h-12 rounded-xl hover:w-[78%] hover:h-[3.2rem] ease-in duration-200 sm:w-28 sm:h-10 sm:rounded-lg sm:hover:w-28 sm:hover:h-10 sm:mx-8 sm:hover:-translate-y-1 hover:bg-blue-400 dark:bg-slate-50 dark:text-black dark:font-medium dark:hover:bg-slate-200
+        @apply bg-[rgb(42,50,53,255)] text-white my-3 w-3/4 h-12 rounded-xl hover:w-[78%] hover:h-[3.2rem] ease-in duration-200 sm:w-28 sm:h-10 sm:rounded-lg sm:hover:w-28 sm:hover:h-10 sm:mx-8 sm:hover:-translate-y-1 hover:bg-blue-400 dark:bg-slate-50 dark:text-black dark:font-medium dark:hover:bg-slate-300
     }
     .tabtnlite{
-        @apply bg-[rgb(42,50,53,255)] text-white my-3 w-3/4 h-12 rounded-xl ease-in duration-200 hover:bg-blue-400 active:bg-blue-400 sm:hidden dark:bg-slate-50 dark:text-black dark:font-medium dark:hover:bg-slate-50 dark:active:bg-slate-50
+        @apply bg-[rgb(42,50,53,255)] text-white my-3 w-3/4 h-12 rounded-xl ease-in duration-200 hover:bg-blue-400 active:bg-blue-400 sm:hidden dark:bg-slate-50 dark:text-black dark:font-medium dark:hover:bg-slate-800 dark:active:bg-slate-800 dark:hover:text-white dark:active:text-white
     }
 }
 
@@ -43,3 +87,64 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+
+.skillhidden {
+    opacity:0;
+    filter:blur(2px);
+    transform:translateY(-100%);
+    transition: all 1s;
+}
+
+.skillshow{
+    opacity:1;
+    filter:blur(0px);
+    transform:translateY(0);
+}
+
+
+.projhidden {
+        opacity:0;
+        transform:translateY(-10%);
+        transition: all 1s;
+    }
+
+.projhiddenleft {
+        opacity:0;
+        transform:translateY(-10%);
+        transition: all 1s;
+    }
+
+@media(min-width:480px){
+    .projhidden {
+        opacity:0;
+        transform:translateX(100%);
+        transition: all 1s;
+    }
+
+    .projhiddenleft {
+        opacity:0;
+        transform:translateX(100%);
+        transition: all 1s;
+    }
+}
+
+
+@media(min-width:768px){
+    .projhidden {
+        opacity:0;
+        transform:translateX(100%);
+        transition: all 1s;
+    }
+
+    .projhiddenleft {
+        opacity:0;
+        transform:translateX(-100%);
+        transition: all 1s;
+    }
+}
+
+.projshow{
+    opacity:1;
+    transform:translateX(0);
+    transform: translateY(0);
+}

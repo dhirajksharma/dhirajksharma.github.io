@@ -13,7 +13,7 @@ class Cards extends React.Component{
                     alt=""
                     class="timeline-img bg-white"
                 />
-                <div class="timeline-container">
+                <div class="timeline-container projhidden mb-6">
                     <div
                         class="timeline-pointer"
                         aria-hidden="true"
@@ -26,7 +26,7 @@ class Cards extends React.Component{
                         </p>
                         <a href={this.props.link} target="_blank">
                         <button
-                            className="tabs bg-green-500 hover:bg-green-400 text-white my-3 w-28 h-10 rounded-xl  sm:rounded-xl"
+                            className="tabs bg-green-600 hover:bg-green-500 text-white my-3 w-28 h-10 rounded-lg sm:rounded-lg"
                             onClick={this.handleTabClick}
                         >
                         Visit

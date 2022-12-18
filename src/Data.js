@@ -41,7 +41,7 @@ export const skillData=[
 export const projectData=[
     {
         itr:0,
-        img:"https://github.com/dhirajksharma/thelorestore-frontend/blob/main/public/android-chrome-512x512.png?raw=true",
+        img:"https://drive.google.com/uc?id=1CMJL0asTZnvWx9L3-fkK3SBPmEJDg-lu",
         tag:"MongoDB Express.JS React.JS TailwindCSS",
         title:"The Lore Store",
         body:"An online Book Store built using the MERN stack and styled using TailwindCSS.",
@@ -49,26 +49,18 @@ export const projectData=[
     },
     {
         itr:1,
-        img:"https://github.com/dhirajksharma/dhirajksharma.github.io/blob/main/public/android-chrome-384x384.png?raw=true",
-        tag:"React.JS jQuery TailwindCSS",
-        title:"My Portfolio",
-        body:"Well, you are currently here! A single place to showcase my skills, the projects I have worked upon, the work experiences I have and a peek at my resume!",
-        link:"https://dhirajksharma.github.io/",
-    },
-    {
-        itr:2,
-        img:"https://github.com/dhirajksharma/reactgames/blob/main/src/logo.png?raw=true",
+        img:"https://drive.google.com/uc?id=1KHJFyem_abXdYYCdE2cIS67VPQQUXt8p",
         tag:"React.JS",
         title:"React Games",
         body:"A set of simple games built using React.js. Games currently include Hangman, and Lights Out, with Yahtzee soon to be added.",
         link:"https://psreactgames.vercel.app",
     },
     {
-        itr:3,
-        img:"https://github.com/dhirajksharma/pokeduel/blob/main/res/pokeball.png?raw=true",
+        itr:2,
+        img:"https://drive.google.com/uc?id=1-eATZoOiNDWfKc1oBaLG4FkBWRgkAjSM",
         tag:"JavaScript jQuery",
         title:"Poké Duel",
-        body:"A Basic Pokémon game where 2 players choose their Pokémons from a randomly generated group and duel against each other. The Pokémon with more power remaining at the end of the duel, wins!",
+        body:"A Basic Pokémon game where 2 players choose their Pokémons and duel against each other. The Pokémon with more power remaining at the end of the duel, wins!",
         link:"https://dhirajksharma.github.io/pokeduel/",
     }
 ]

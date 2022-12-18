@@ -13,8 +13,10 @@ class Tab extends React.Component{
     handleTabClick(evt){
       let tabclicked=evt.target.value;
       ["Projects","Resume","Skills","Experience"].map(tb => {
-          if(tb===tabclicked)
-            $(`#${tb}`).slideToggle();
+          if(tb===tabclicked && tb!=="Projects")
+            $(`#${tb}`).fadeToggle();
+          else if(tb===tabclicked && tb==="Projects")
+            $(`#${tb}`).slideToggle("slow");
           else
             $(`#${tb}`).hide();
             
