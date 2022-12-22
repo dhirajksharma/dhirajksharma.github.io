@@ -52,7 +52,7 @@ export const projectData=[
         img:"https://github.com/dhirajksharma/reactgames/blob/main/src/logo.png?raw=true",
         tag:"React.JS",
         title:"React Games",
-        body:"A set of simple games built using React.js. Games currently include Hangman, and Lights Out, with Yahtzee soon to be added.",
+        body:"A set of simple games built using React.js. Games currently include Hangman, Lights Out and Yahtzee.",
         link:"https://psreactgames.vercel.app",
     },
     {
