@@ -19,12 +19,13 @@ function App() {
     
   return (
     <div className='min-h-screen h-max flex flex-col antialiased dark:bg-[#0f1728]'>
-      <div id="blob" className='hidden dark:lg:block bg-amber-100 h-[140px] aspect-square absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 rounded-full blur-3xl pointer-events-none animate-blobrotate'></div>
-      <div className='grow'>
+      <div id="blob" className='hidden dark:lg:block bg-gradient-to-r from-amber-100 to-blue-500 h-[140px] aspect-square absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 rounded-full pointer-events-none animate-blobrotate'></div>
+      <div id="blur" className='h-full w-full absolute z-10 backdrop-blur-3xl'></div>
+      <div className='grow z-20'>
       <Head/>
       <Tab/>
       </div>
-      <div id="foot" className='text-2xl flex flex-row text-slate-700 justify-center dark:text-gray-300 dark:sm:text-gray-400'>
+      <div id="foot" className='text-2xl flex flex-row text-slate-700 justify-center dark:text-gray-300 dark:sm:text-gray-400 z-20'>
         <a href="https://in.linkedin.com/in/dhirajksharma29" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedinIn} className="socialinks"/></a>
         <a href="mailto:dhirajksharma.official@gmail.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEnvelope} className="socialinks"/></a>
         <a href="https://github.com/dhirajksharma" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithubAlt} className="socialinks"/></a>
