@@ -19,10 +19,10 @@ function App() {
     
   return (
     <Fragment>
-    <div id="blur" className='min-h-screen h-max bg-slate-400 absolute z-10 backdrop-blur-xl'></div>
-    <div id="blob" className='hidden dark:lg:block bg-gradient-to-r from-amber-100 to-blue-500 h-[140px] aspect-square blur-2xl absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 rounded-full pointer-events-none animate-blobrotate'></div>
     <div className='min-h-screen h-max flex flex-col antialiased dark:bg-[#0f1728]'>
       <div className='grow z-20'>
+    <div id="blur" className='min-h-screen h-max bg-slate-400 absolute z-10 backdrop-blur-xl'></div>
+    <div id="blob" className='hidden dark:lg:block bg-gradient-to-r from-amber-100 to-blue-500 h-[140px] aspect-square blur-2xl absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 rounded-full pointer-events-none animate-blobrotate'></div>
       <Head/>
       <Tab/>
       </div>
