@@ -18,16 +18,6 @@ module.exports = {
       fontFamily: {
         'montserrat': ['Montserrat'],
       },
-      keyframes:{
-        blobrotate:{
-          '0%':{ transform: 'rotate(0deg)'},
-          '50%':{ transform: 'scaleX(0)', transform: 'scaleY(1.25)'},
-          '100%':{transform: 'rotate(360deg)'}
-        }
-      },
-      animation:{
-        blobrotate: 'blobrotate 20s infinite'
-      }
     },
   },
   plugins: [],
