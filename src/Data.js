@@ -49,18 +49,18 @@ export const projectData=[
     },
     {
         itr:1,
-        img:"https://github.com/dhirajksharma/reactgames/blob/main/src/logo.png?raw=true",
+        img:"https://github.com/dhirajksharma/reactgames/blob/main/src/res/logo.png?raw=true",
         tag:"React.JS",
-        title:"React Games",
-        body:"A set of simple games built using React.js. Games currently include Hangman, Lights Out and Yahtzee.",
-        link:"https://psreactgames.vercel.app",
+        title:"PS React",
+        body:"A simple React.js application with fun games like Hangman, and Lights Out.",
+        link:"https://psreact.vercel.app",
     },
     {
         itr:2,
         img:"https://github.com/dhirajksharma/pokeduel/blob/main/res/pokeball.png?raw=true",
         tag:"JavaScript jQuery",
         title:"Poké Duel",
-        body:"A Basic Pokémon game where 2 players choose their Pokémons and duel against each other. The Pokémon with more power remaining at the end of the duel, wins!",
+        body:"A Pokémon game where 2 players choose their Pokémons and duel against each other. The Pokémon with more power remaining at the end of the duel, wins!",
         link:"https://dhirajksharma.github.io/pokeduel/",
     }
 ]
