@@ -1,5 +1,5 @@
 import React from "react";
-import me from './me.jpeg';
+import me from './me3.jpeg';
 class Head extends React.Component{
     render(){
         return (
