@@ -1,88 +1,132 @@
 import React from "react";
 import $ from "jquery";
-import Cards from "./Cards";
-import CardsLeft from "./CardsLeft";
+import './Project.css';
 import {projectData} from "./Data.js";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft, faArrowRight} from '@fortawesome/free-solid-svg-icons'
 
 class Projects extends React.Component{
     constructor(props) {
         super(props);
-        this.handleToggle=this.handleToggle.bind(this);
+        this.handleProjectDetailsToggle=this.handleProjectDetailsToggle.bind(this);
     }
-    componentDidMount(){
-      const observer=new IntersectionObserver((entries)=>{
-        entries.forEach((entry)=>{
-          if(entry.isIntersecting){
-            entry.target.classList.add('projshow');
-          }
-        })
-      })
-
-      document.querySelectorAll('.projhidden, .projhiddenleft').forEach((el,i)=>{
-        el.style.transitionDelay = i * 300 + "ms";
-        observer.observe(el)
-      });
-    }
-
-    handleToggle(evt){
-        let tabclicked=evt.target.value;
-      ["Projects","Resume","Skills","Experience"].map(tb => {
-          if(tb===tabclicked) {
-            $(`#${tb}`).slideToggle('slow');
-          }
-          else
-            $(`#${tb}`).slideUp('slow');
-      });
-      [...document.querySelectorAll(".tabs")].map(btn => {
-        if(btn.value===tabclicked) {
-          if(btn.classList.contains('bg-blue-400'))
-            btn.classList.remove('bg-blue-400')
-          else
-            btn.classList.add('bg-blue-400')
+    
+    observer=new IntersectionObserver((entries)=>{
+      entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('showPrj');
         }
-        else
-          btn.classList.remove('bg-blue-400')
-      });      
-      
+      })
+    })
+    
+    componentDidMount(){
+      const hiddenElements=document.querySelectorAll('.hidingPrj');
+      hiddenElements.forEach(ele=>this.observer.observe(ele));
     }
+    
+    handleProjectDetailsToggle(id){
+      $(".containerDiv").animate({ scrollTop: 0 }, 1200);
+      if($('#projectcards').css('display')!=='none'){
+        $('#projectcards').slideUp(1200);
+        $('#'+id).css('display','flex');
+        setTimeout(() => {
+          $('#back'+id).animate(
+            {opacity:1},
+            3000
+          )
+        }, 1200);
+      }else{
+        $('#back'+id).css('opacity','0');
+        $('#projectcards').slideDown(1200);
+        setTimeout(() => {
+          $('#'+id).css('display','none');
+        }, 1000);
+      }
+    }
+
     render(){
-        return (
-          <div className="flex flex-col items-center">
-            <button
-            id="Projects-btn"
-            value="Projects"
-            className="tabtnlite"
-            onClick={this.handleToggle}
-            >
+      return(
+        <div className="flex flex-col items-center lg:items-start w-full justify-start">
+        <div id="projectcards" className="">
+          {
+            (window.innerWidth >=1024 &&
+              <div className="font-outfit text-lg mt-2 tracking-wide">
                 Projects
-            </button>
-            <div id="Projects" className="hidden sm:mt-5 overflow-hidden">
-              <div className="relative container mx-auto px-6 flex flex-col space-y-8 lg:w-4/5">
-              <div id="bar" className="absolute z-0 w-2 h-[90%] rounded-md bg-blue-400 shadow-md inset-0 left-17 md:left-0 md:right-0 md:mx-auto"></div>
-              {
-                projectData.map(obj=>{
-                  if(obj.itr%2===0)
-                    return <Cards
-                    img={obj.img}
-                    tag={obj.tag}
-                    title={obj.title}
-                    body={obj.body}
-                    link={obj.link}
-                    />
-                  else
-                  return <CardsLeft
-                  img={obj.img}
-                  tag={obj.tag}
-                  title={obj.title}
-                  body={obj.body}
-                  link={obj.link}
-                  />
-                })
-              }
+              </div>)
+          }
+          {
+            projectData.map(prj => (
+              <div className="w-[90vw] lg:w-[70%] h-[200px] rounded-lg flex flex-col pl-3 my-5 sm:my-8 lg:mt-2 lg:mb-5 shadow shadow-gray-300 hidingPrj cursor-pointer"
+                onClick={()=>this.handleProjectDetailsToggle(prj.id)}>
+                
+                <div className="flex items-center justify-between pr-4 mt-2 mb-1">
+                  <img src={prj.img} loading="eager" className="w-10 sm:w-14 lg:w-12 aspect-square rounded-md bg-gray-100"></img>
+                  <a href={prj.link} target="_blank" rel="noreferrer" onClick={(e)=>e.stopPropagation()}>
+                    <FontAwesomeIcon icon={faArrowRight} className="text-xl lg:text-lg -rotate-45 text-green-600 border-2 border-solid rounded-full py-[5px] px-[6px] border-green-500"/>
+                  </a>
+                </div>
+                
+                <h1 className="text-lg sm:text-2xl lg:text-lg font-outfit">{prj.title}</h1>
+                
+                <div className="flex w-[90%] flex-wrap">
+                  {prj.tag.map(tg=>(
+                    <div className="mr-2 rounded-lg bg-slate-100 px-2 py-1 text-sm mb-2 sm:text-base lg:text-sm lg:rounded-md sm:mt-1 lg:tracking-wide">{tg}</div>
+                    ))
+                  }
+                </div>
+                
+                <p className="font-montserrat text-sm sm:text-base mr-1 mb-2">{prj.intro}</p>
+              </div>
+            ))
+          }
+
+        </div>
+
+        {
+          projectData.map(prj =>(
+            <div id={prj.id} className="w-[95vw] lg:w-full hidden flex-col items-center">
+              <div className="w-full relative lg:hidden">
+                <button
+                  id={'back'+prj.id}
+                  onClick={()=>this.handleProjectDetailsToggle(prj.id)}
+                  className="absolute top-2 left-3 text-white text-xl sm:text-2xl mix-blend-difference opacity-0">
+                  <FontAwesomeIcon icon={faArrowLeft} className=""/>
+                </button>
+                <img src={prj.cover} className="w-full aspect-video rounded-t-lg"></img>
+                <img src={prj.img} className="w-14 sm:w-16 lg:w-14 aspect-square rounded-md absolute -bottom-[1.3rem] left-[0.6rem] sm:left-[1rem] bg-gray-100"></img>
+              </div>
+
+              <div className="w-[95%] lg:w-full mt-7 lg:mt-2 lg:pr-10">
+                <h1 className="text-xl sm:text-2xl lg:text-xl font-outfit">{prj.title}</h1>
+                <h2 className="mt-1 sm:mt-2 lg:mt-4 sm:text-xl lg:hidden font-outfit font-medium tracking-wide lg:tracking-wider">Description</h2>
+                <p className="font-montserrat text-justify text-sm sm:text-base lg:tracking-wide">{prj.intro}</p>
+                <h2 className="mt-1 sm:mt-2 lg:mt-4 sm:text-xl lg:text-base font-outfit font-medium tracking-wide lg:tracking-wider">Inspiration</h2>
+                <p className="font-montserrat text-justify text-sm sm:text-base lg:tracking-wide">{prj.insp}</p>
+                <img src={prj.cover} className="hidden lg:block w-[600px] mx-auto my-3 aspect-video rounded-lg"></img>
+                <h2 className="mt-1 sm:mt-2 lg:mt-4 sm:text-xl lg:text-base font-outfit font-medium tracking-wide lg:tracking-wider">Tech Stack</h2>
+                <p className="font-montserrat text-justify text-sm sm:text-base lg:tracking-wide">{prj.tech}</p>
+                <h2 className="mt-1 sm:mt-2 lg:mt-4 sm:text-xl lg:text-base font-outfit font-medium tracking-wide lg:tracking-wider">Challenges</h2>
+                <p className="font-montserrat text-justify text-sm sm:text-base lg:tracking-wide">{prj.chal}</p>
+              </div>
+
+              <div className="flex justify-center w-full">
+                <a href={prj.link} target="_blank" rel="noreferrer">
+                  <button
+                    className="bg-green-400 py-3 my-4 sm:mb-8 sm:text-xl lg:text-base sm:rounded-xl lg:rounded-lg rounded-lg font-montserrat w-[90vw] max-w-[500px] lg:w-[250px] flex justify-center items-center lg:mx-2">
+                      Checkout!
+                  </button>
+                </a>
+                <button
+                  onClick={()=>this.handleProjectDetailsToggle(prj.id)}
+                  className="hidden bg-gray-100 py-3 mt-4 mb-8 text-base rounded-lg font-montserrat w-[250px] lg:flex justify-center items-center lg:mx-2">
+                    Go Back
+                </button>
               </div>
             </div>
-          </div>
-        );
+          ))
+        }
+      </div>
+      )
     }
 }
 

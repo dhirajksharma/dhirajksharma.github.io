@@ -1,0 +1,24 @@
+.hidingExp{
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateX(100%);
+    transition: transform 1200ms;
+}
+
+.showExp{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(24px);
+}
+
+h1.hidingExp{
+    transition-delay: 200ms;
+}
+
+h3.hidingExp{
+    transition-delay: 250ms;
+}
+
+p.hidingExp{
+    transition-delay: 400ms;
+}

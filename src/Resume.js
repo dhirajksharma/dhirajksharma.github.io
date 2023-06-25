@@ -1,46 +1,25 @@
 import React from "react";
 import $ from "jquery";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleDown } from '@fortawesome/free-solid-svg-icons'
 
 class Resume extends React.Component{
     constructor(props) {
         super(props);
-        this.handleToggle=this.handleToggle.bind(this);
     }
-    handleToggle(evt){
-        let tabclicked=evt.target.value;
-      ["Projects","Resume","Skills","Experience"].map(tb => {
-        if(tb===tabclicked) {
-          $(`#${tb}`).slideToggle('slow');
-        }
-        else
-          $(`#${tb}`).slideUp('slow');
-      });
-      [...document.querySelectorAll(".tabs")].map(btn => {
-        if(btn.value===tabclicked) {
-          if(btn.classList.contains('bg-blue-400'))
-            btn.classList.remove('bg-blue-400')
-          else
-            btn.classList.add('bg-blue-400')
-        }
-        else
-          btn.classList.remove('bg-blue-400')
-      });      
-      
-    }
+    
     render(){
         return (
-          <div className="flex flex-col items-center mb-auto">
-            <button
-            id="Resume-btn"
-            value="Resume"
-            className="tabtnlite"
-            onClick={this.handleToggle}
-            >
-                Resume
-            </button>
-            <div id="Resume" className="hidden">
-            <iframe id="resumeid" className="pdfembed" src="https://drive.google.com/file/d/19wB-lSbnTzGX7PNaIWRLbImAuQiZIML3/preview" allow="autoplay"></iframe>
-            </div>
+          <div className="flex flex-col items-center w-full justify-center">
+            <iframe id="resumeframe" loading="eager" className="pdfembed" src="https://drive.google.com/file/d/19wB-lSbnTzGX7PNaIWRLbImAuQiZIML3/preview" allow="autoplay"></iframe>
+
+            <a href="https://drive.google.com/uc?export=download&id=19wB-lSbnTzGX7PNaIWRLbImAuQiZIML3" target="_blank" rel="noreferrer">
+              <button
+                  className="bg-green-400 py-3 mt-4 mb-2 sm:my-8 rounded-xl font-montserrat w-[250px] sm:w-[400px] flex justify-center items-center sm:text-xl">
+                      <FontAwesomeIcon icon={faCircleDown} className="text-2xl mr-2"/>
+                      Download
+              </button>
+            </a>
           </div>
         );
     }

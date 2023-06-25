@@ -1,0 +1,33 @@
+.hideFace{
+    transform: translateY(-90%);
+    transition: all 1s ease-out;
+}
+
+.showFace{
+    transform: translateY(0);
+}
+
+.hideIntro{
+    transform: translateX(-100%);
+    transition: all 1s ease-out;
+}
+
+.hideIntro:nth-child(2){
+    transform: translateX(100%);
+    transition-delay: 300ms;
+}
+
+.showIntro{
+    transform: translateX(0) !important;
+}
+
+
+.hideButton{
+    opacity: 0;
+    transition: all 1000ms;
+    transition-delay: 400ms;
+}
+
+.showButton{
+    opacity: 1;
+}

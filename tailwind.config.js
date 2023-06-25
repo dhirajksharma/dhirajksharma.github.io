@@ -17,6 +17,12 @@ module.exports = {
       },
       fontFamily: {
         'montserrat': ['Montserrat'],
+        'comforter':['Comforter'],
+        'outfit':['Outfit'],
+      },
+      boxShadow: {
+        myShadow1: "10px -2px 0 0 #fff",
+        myShadow2: "-10px -2px 0 0 #fff",
       },
     },
   },

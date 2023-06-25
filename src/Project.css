@@ -1,0 +1,24 @@
+.hidingPrj{
+    opacity: 0;
+    filter: blur(23px);
+    transform: translateY(-100%);
+    transition: all 1200ms;
+}
+
+.showPrj{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+.hidingPrj:nth-child(2){
+    transition-delay: 600ms;
+}
+
+.hidingPrj:nth-child(3){
+    transition-delay: 1200ms;
+}
+
+.hidingPrj:nth-child(4){
+    transition-delay: 1800ms;
+}
