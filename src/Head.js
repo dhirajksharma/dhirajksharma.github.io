@@ -1,7 +1,7 @@
 import React from "react"
 import me from './me1.jpg'
 import $ from 'jquery'
-import './Home.css'
+import './Head.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faLink, faBriefcase, faPalette, faPaintBrush } from '@fortawesome/free-solid-svg-icons'
 import { faGithubAlt, faLinkedinIn, faMedium} from '@fortawesome/free-brands-svg-icons'
@@ -85,7 +85,12 @@ class Head extends React.Component{
                 <img id="myface" src={me} loading="eager" className="aspect-square rounded-md max-w-[65%] sm:max-w-[60%] shadow-lg shadow-slate-400 hideFace"></img>
 
                 <div id='divi1' className="">
-                <p className="hideIntro my-3 sm:mt-8 lg:mt-2 w-[275px] sm:w-[510px] lg:w-[275px] sm:text-2xl lg:text-base text-center font-medium font-outfit text-gray-700">Hi, I am Dhiraj Kumar Sharma, a 2024 passout B.Tech in CSE. My areas of interest include Front End Dev, UI/UX Design, Comics and Chai &#9749;</p>
+                <p className="hideIntro my-3 sm:mt-8 lg:mt-2 w-[260px] sm:w-[470px] lg:w-[260px] sm:text-2xl lg:text-base text-center font-medium font-outfit text-gray-700">
+                    {
+                        ((window.innerWidth>=640 && window.innerWidth<1024)?"Hi, I'm Dhiraj Sharma. ":"")
+                    }
+                    An aspiring FrontEnd Developer, with particular interests in UI/UX Design, Comics and Chai &#9749;
+                    </p>
                 <p className="hideIntro text-center font-bold text-2xl sm:text-4xl lg:text-2xl sm:mt-6 lg:mt-0 text-gray-700 font-comforter tracking-widest">@Kolkata, India</p>
                 </div>
 
@@ -112,7 +117,7 @@ class Head extends React.Component{
                     
                     <a href="mailto:dhirajksharma.official@gmail.com" target="_blank" rel="noreferrer">
                     <button
-                        className="bg-green-400 hover:opacity-90 py-3 my-4 rounded-xl font-montserrat min-w-[250px] flex justify-center items-center sm:text-2xl lg:text-base sm:w-[300px] lg:w-[250px] sm:mt-6 lg:mt-4">
+                        className="bg-blue-300 hover:opacity-[0.92] py-3 my-4 rounded-xl font-montserrat min-w-[250px] flex justify-center items-center sm:text-2xl lg:text-base sm:w-[300px] lg:w-[250px] sm:mt-6 lg:mt-4">
                             <FontAwesomeIcon icon={faEnvelope} className="text-2xl mr-2 sm:text-4xl lg:text-2xl"/>
                             Let's Connect!
                     </button>

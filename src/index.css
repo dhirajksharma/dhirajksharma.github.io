@@ -56,7 +56,7 @@ table {
     }
     
     .socialinks {
-        @apply mx-1 sm:mx-[0.3rem] lg:hover:text-blue-500 lg:hover:border-blue-500 transition-all border border-gray-600 rounded-full p-[10px];
+        @apply mx-1 sm:mx-[0.3rem] lg:hover:text-blue-400 lg:hover:border-blue-400 transition-all border border-gray-600 rounded-full p-[10px];
     }
 
     .childrenDiv{

@@ -1,0 +1,31 @@
+.abtName{
+    opacity: 0;
+    transition: all 1.5s ease-out;
+    transition-delay: 700ms;
+}
+
+.showAbtName{
+    opacity: 1;
+}
+
+.abtDes{
+    opacity: 0;
+    transform: translateY(-80%);
+    transition: all 700ms ease-out;
+    transition-delay: 2000ms;
+}
+
+.showAbtDes{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.abtPs{
+    opacity: 0;
+    transition: all 2s ease-out;
+    transition-delay: 5000ms;
+}
+
+.showAbtPs{
+    opacity: 1;
+}

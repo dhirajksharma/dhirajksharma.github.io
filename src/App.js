@@ -9,6 +9,7 @@ import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSmile, faFilePdf, faBriefcase, faPalette, faPaintBrush } from '@fortawesome/free-solid-svg-icons'
 import { Fragment } from "react";
+import About from "./About.js";
 
 
 class App extends React.Component {
@@ -38,11 +39,11 @@ class App extends React.Component {
   }
   render(){
     const menus = [
-      { name: "Skills", icon: faPalette, dis: "translate-x-0" },
-      { name: "Projects", icon: faPaintBrush, dis: "translate-x-16" },
-      { name: "Profile", icon: faSmile, dis: "translate-x-32" },
-      { name: "Experience", icon: faBriefcase, dis: "translate-x-48" },
-      { name: "Resume", icon: faFilePdf, dis: "translate-x-64" },
+      { name: "Skills", icon: faPalette},
+      { name: "Projects", icon: faPaintBrush},
+      { name: "Profile", icon: faSmile},
+      { name: "Experience", icon: faBriefcase},
+      { name: "Resume", icon: faFilePdf},
     ];
 
     return (
@@ -54,7 +55,7 @@ class App extends React.Component {
         </div>
         
         <div id='appHolder' className="hidden justify-center items-center h-[100dvh]">
-          <div id='app' className="h-[100dvh] flex flex-col items-center lg:w-[380px] lg:ml-4 lg:h-[95dvh] lg:border lg:rounded-md border-solid border-black">
+          <div id='app' className="h-[100dvh] flex flex-col items-center lg:w-[380px] lg:ml-4 lg:h-[95dvh] lg:border lg:rounded-md border-solid border-fuchsia-900">
 
             <div className="flex justify-between items-center w-screen h-[80px] sm:h-[120px] lg:h-[80px] lg:w-full">
                       <h1 className="ml-5 sm:ml-6 mr-0 text-2xl sm:text-3xl lg:text-2xl font-bold font-outfit tracking-wide">Dhiraj</h1>
@@ -77,7 +78,7 @@ class App extends React.Component {
             
             {
               (window.innerWidth < 1024 &&
-              <div id='bottom-nav' className="hidden bg-[#fcf9f9] px-4 rounded-t-2xl rounded-b-lg w-[95vw] h-[59px] sm:h-[80px] absolute bottom-0 lg:!hidden">
+              <div id='bottom-nav' className="hidden bg-[#f9fbfe] px-4 rounded-t-2xl rounded-b-lg w-[95vw] h-[59px] sm:h-[80px] absolute bottom-0 lg:!hidden">
                       
                     <ul className="flex justify-evenly">
                       {menus.map((menu, i) => (
@@ -90,7 +91,7 @@ class App extends React.Component {
                               
                               <span
                                 className={`text-2xl sm:text-3xl cursor-pointer duration-500 -translate-y-3 ${i === this.state.activeTab && "-mt-6"}`}>
-                                <FontAwesomeIcon icon={menu.icon} className={i===this.state.activeTab?"text-blue-600 scale-125 duration-500":"text-cyan-800"}/>
+                                <FontAwesomeIcon icon={menu.icon} className={i===this.state.activeTab?"text-blue-400 scale-125 duration-500":"text-cyan-800"}/>
                               </span>
                           
                             </a>
@@ -107,6 +108,7 @@ class App extends React.Component {
               {
                 (this.state.activeTab===0 && <Skills/>) ||
                 (this.state.activeTab===1 && <Projects/>) ||
+                (this.state.activeTab===2 && <About/>) ||
                 (this.state.activeTab===3 && <Experience/>)
               }
             </div>)

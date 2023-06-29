@@ -15,9 +15,20 @@ observer=new IntersectionObserver((entries)=>{
   })
 })
 
+expBtnobserver=new IntersectionObserver((entries)=>{
+  entries.forEach((entry)=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('showExpBtn');
+    }
+  })
+})
+
 componentDidMount(){
   const hiddenElements=document.querySelectorAll('.hidingExp');
   hiddenElements.forEach(ele=>this.observer.observe(ele));
+
+  if(window.innerWidth > 1024)
+    this.expBtnobserver.observe(document.querySelector('.expBtn'));
 }
 
 render(){
@@ -40,6 +51,18 @@ render(){
               <p className="mt-2 translate-x-6 sm:text-lg lg:text-base mb-4 font-montserrat w-[80vw] lg:w-[90%] text-justify hidingExp">{exp.details}</p>
             </div>
           ))
+        }
+
+        {
+          (window.innerWidth >= 1024 &&
+            <div className="flex justify-end w-[85%]">
+            <a href="https://drive.google.com/file/d/19wB-lSbnTzGX7PNaIWRLbImAuQiZIML3/view" target="_blank" rel="noreferrer">
+              <button
+                  className="bg-blue-300 hover:opacity-[0.92] py-3 mt-4 mb-2 rounded-lg font-montserrat w-[200px] expBtn">
+                  Checkout My Resume
+              </button>
+            </a>
+            </div>)
         }
       </div>
     );

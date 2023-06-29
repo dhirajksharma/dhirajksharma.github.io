@@ -15,7 +15,7 @@ class Resume extends React.Component{
 
             <a href="https://drive.google.com/uc?export=download&id=19wB-lSbnTzGX7PNaIWRLbImAuQiZIML3" target="_blank" rel="noreferrer">
               <button
-                  className="bg-green-400 py-3 mt-4 mb-2 sm:my-8 rounded-xl font-montserrat w-[250px] sm:w-[400px] flex justify-center items-center sm:text-xl">
+                  className="bg-blue-300 py-3 mt-4 mb-2 sm:my-8 rounded-xl font-montserrat w-[250px] sm:w-[400px] flex justify-center items-center sm:text-xl">
                       <FontAwesomeIcon icon={faCircleDown} className="text-2xl mr-2"/>
                       Download
               </button>

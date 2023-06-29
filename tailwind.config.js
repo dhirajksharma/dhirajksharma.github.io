@@ -19,6 +19,7 @@ module.exports = {
         'montserrat': ['Montserrat'],
         'comforter':['Comforter'],
         'outfit':['Outfit'],
+        'julius':['Julius Sans One']
       },
       boxShadow: {
         myShadow1: "10px -2px 0 0 #fff",
@@ -26,5 +27,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }
