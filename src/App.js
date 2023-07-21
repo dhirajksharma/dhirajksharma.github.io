@@ -62,7 +62,7 @@ class App extends React.Component {
                       <h1 className="mr-5 sm:mr-6 ml-0 text-right sm:text-xl lg:text-base font-outfit font-light leading-5">Frontend Designer<br></br> & Developer</h1>
             </div>
 
-            <div id='' className="h-[calc(100dvh-140px)] sm:h-[calc(100dvh-200px)] lg:h-full w-[98vw] lg:w-full overflow-scroll containerDiv">
+            <div id='' className="h-[calc(100dvh-140px)] sm:h-[calc(100dvh-200px)] lg:h-full w-screen lg:w-full overflow-scroll containerDiv">
               {
                 (window.innerWidth < 1024 ? (
                   (this.state.activeTab===0 && <Skills/>) ||

@@ -56,6 +56,12 @@ export const projectData=[
 
 export const experienceData=[
     {
+        year:"2022",
+        title:"Adobe UX Foundation",
+        location:"FutureSkills Prime",
+        details:"Having completed the Adobe UX Journey, I've gained valuable insights into User Experience Design. The course covered essential topics such as user-centric design, research techniques like interviews and usability testing, principles of visual design like color theory and typography, creating user personas and sitemaps, and finally, crafting interactive mock-ups. This comprehensive learning experience has equipped me with the skills needed to create intuitive and engaging digital experiences that cater to user needs and preferences. I'm now confident in my ability to approach UX projects with a structured and informed approach, ensuring a smooth and enjoyable user experience."
+    },
+    {
         year:"2020-2024",
         title:"B. Tech in Computer Science",
         location:"Techno Main Salt Lake",
