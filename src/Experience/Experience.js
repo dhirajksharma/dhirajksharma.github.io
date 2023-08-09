@@ -1,11 +1,7 @@
 import React from "react";
 import './Experience.css';
-import { experienceData } from "./Data";
+import { experienceData } from "../Data/Data";
 class Experience extends React.Component{
-  constructor(props) {
-    super(props);
-    
-}
 
 observer=new IntersectionObserver((entries)=>{
   entries.forEach((entry)=>{

@@ -1,15 +1,15 @@
 import React from "react";
 import $ from 'jquery';
-import Head from "./Head.js"
-import Skills from "./Skills.js";
-import Projects from './Projects.js';
-import Experience from "./Experience.js";
-import Resume from "./Resume.js";
+import Head from "./Head/Head.js"
+import Skills from "./Skills/Skills.js";
+import Projects from './Projects/Projects.js';
+import Experience from "./Experience/Experience.js";
+import Resume from "./Resume/Resume.js";
+import About from "./About/About.js";
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSmile, faFilePdf, faBriefcase, faPalette, faPaintBrush } from '@fortawesome/free-solid-svg-icons'
 import { Fragment } from "react";
-import About from "./About.js";
 
 
 class App extends React.Component {

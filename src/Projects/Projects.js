@@ -1,7 +1,7 @@
 import React from "react";
 import $ from "jquery";
 import './Project.css';
-import {projectData} from "./Data.js";
+import {projectData} from "../Data/Data";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight} from '@fortawesome/free-solid-svg-icons'
 
@@ -51,7 +51,7 @@ class Projects extends React.Component{
           {
             (window.innerWidth >=1024 &&
               <div className="font-outfit text-lg mt-2 tracking-wide">
-                Projects
+                My Work
               </div>)
           }
           {

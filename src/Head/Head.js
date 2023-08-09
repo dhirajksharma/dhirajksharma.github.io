@@ -96,7 +96,7 @@ class Head extends React.Component{
 
                 <div className="hideButton">
                     <div id="foot" className='text-2xl flex flex-row text-cyan-800 justify-center'>
-                        <button onClick={()=>{this.setState({activeTab:0}); this.props.handleMobileNav(0)}}><FontAwesomeIcon icon={faPalette} className={`socialinks sm:text-3xl lg:text-2xl ${this.state.activeTab===0 && "text-blue-500 border-blue-500"}`}/></button>
+                        <button onClick={()=>{this.setState({activeTab:0}); this.props.handleMobileNav(0)}}><FontAwesomeIcon icon={faPalette} className={`socialinks sm:text-3xl lg:text-2xl ${this.state.activeTab===0 && "text-blue-500 border-blue-500 "}`}/></button>
                         <button onClick={()=>{this.setState({activeTab:1}); this.props.handleMobileNav(1)}}><FontAwesomeIcon icon={faPaintBrush} className={`socialinks text-xl sm:text-2xl lg:text-xl py-3 px-[11px] sm:py-[0.8rem] lg:py-3 ${this.state.activeTab===1 && "text-blue-500 border-blue-500"}`}/></button>
                         <button onClick={()=>{this.setState({activeTab:3}); this.props.handleMobileNav(3)}}><FontAwesomeIcon icon={faBriefcase} className={`socialinks sm:text-3xl lg:text-2xl ${this.state.activeTab===3 && "text-blue-500 border-blue-500"}`}/></button>
                         
