@@ -31,3 +31,33 @@
 .showButton{
     opacity: 1;
 }
+
+.blurred-img {
+    background-image: url(me2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(4px);
+  }
+
+.blurred-img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background-color: white;
+}
+  
+.blurred-img.loaded {
+    animation: none;
+    content: none;
+    filter: none;
+}
+
+.blurred-img img {
+    opacity: 0;
+    transition: all 250ms ease-in-out;
+}
+
+.blurred-img.loaded img {
+    opacity: 1;
+}

@@ -12,7 +12,8 @@ class Head extends React.Component{
         this.state={
             activeTab:2,
         }
-      
+        
+        this.faceLoad=this.faceLoad.bind(this);
         this.toggleSocial=this.toggleSocial.bind(this);
     }
 
@@ -76,13 +77,29 @@ class Head extends React.Component{
         this.Faceobserver.observe(document.querySelector('#myface'));
         document.querySelectorAll('.hideIntro').forEach(ele=>this.Introobserver.observe(ele));
         this.Buttonobserver.observe(document.querySelector('.hideButton'));
+        this.faceLoad();
     }
 
+    faceLoad(){
+        const blurredImageDiv = document.querySelector(".blurred-img")
+        const img = blurredImageDiv.querySelector("img")
+        function loaded() {
+            blurredImageDiv.classList.add("loaded")
+        }
+
+        if (img.complete) {
+            loaded()
+        } else {
+            img.addEventListener("load", loaded)
+        }
+    }
 
     render(){
         return (
             <div className="flex flex-col items-center justify-evenly h-full">
-                <img id="myface" src={me} loading="eager" className="aspect-square rounded-md max-w-[65%] sm:max-w-[60%] shadow-lg shadow-slate-400 hideFace"></img>
+                <div id="myface" className="blurred-img aspect-square rounded-md max-w-[65%] sm:max-w-[60%] hideFace">
+                    <img src={me} loading="eager" className="shadow-lg rounded-md shadow-slate-400"></img>
+                </div>
 
                 <div id='divi1' className="">
                 <p className="hideIntro my-3 sm:mt-8 lg:mt-2 w-[260px] sm:w-[470px] lg:w-[260px] sm:text-2xl lg:text-base text-center font-medium font-outfit text-gray-700">
