@@ -24,7 +24,7 @@ export const projectData=[
         tag:["React.JS","TailwindCSS"],
         link:"https://psreact.vercel.app",
         title:"PS React",
-        intro:"Welcome to PS React, a platform built for casual gaming enthusiasts. Dive into a world of entertainment with classic games like Hangman and Lights Out, designed to challenge and delight. Experience fun, sharpen your skills, with fellow gamers at PS React today.",
+        intro:"Welcome to PS React, a platform built for casual gaming enthusiasts. Dive into a world of entertainment with classic games like Pokeduel, Hangman and Lights Out, designed to challenge and delight. Experience fun, sharpen your skills, with fellow gamers at PS React today.",
         insp:"When I was learning vanilla JS, I created a Pokemon game. Therefore, it seemed logical for me to develop more games when I began working with React JS. Considering the multitude of task schedulers already available on Github, it didn't make sense to add yet another one to the collection. You see, there's a certain enthusiasm and excitement that comes with working on an original idea, which is lacking when you're recreating an already existing project.",
         jrny:[
             "When I first started learning React, one of the first significant assignments I received was to create a game called Hangman. At first, I wasn't quite sure what kind of game it was. upon some googling I discovered that Hangman is like a precursor to Wordle—a game where you try to guess the 5 letters of a random word within 6 attempts.  It seemed like a nice and easy task.",
@@ -35,23 +35,6 @@ export const projectData=[
         ],
         chal:"Curabitur rhoncus posuere turpis, eget dignissim urna interdum vitae. Donec malesuada, nisl ac tincidunt mollis, mauris erat gravida erat, quis commodo magna nisi eget nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut sit amet odio et tortor dictum elementum at sed risus. Vivamus eget dui commodo, fermentum quam vitae, elementum eros. Vivamus eget nisi dictum, scelerisque purus eget, dictum orci. Quisque fringilla aliquet ligula, eget eleifend leo ullamcorper ut. Nulla scelerisque consequat suscipit. Curabitur mattis leo erat. Praesent sed tortor ultrices orci vulputate faucibus. Fusce laoreet purus non sem euismod, vel ornare augue accumsan. Phasellus quis finibus diam."
     },
-    {
-        id:"pokeduel",
-        img:"https://github.com/dhirajksharma/pokeduel/blob/main/res/pokeball.png?raw=true",
-        cover:"https://github.com/dhirajksharma/pokeduel/blob/main/res/pokeduel.png?raw=true",
-        tag:["JavaScript", "jQuery"],
-        link:"https://dhirajksharma.github.io/pokeduel/",
-        title:"Poké Duel",
-        intro:"Prepare yourselves for the PokéDuel! Choose your favorite Pokémon, challenge a friend, and engage them in battles. Emerge victorious by outsmarting your opponent and proving your Pokémon mastery at PokéDuel today.",
-        insp:"This is a rather simple project I created while I was still learning DOM Manipulation. It began with a basic grid of Pokémon, but it swiftly evolved (pun intended) into something far beyond a simple half-hour assignment. I believe it all stems from my childhood love for Pokémon and the nostalgic feelings that this assignment triggered in me. It simply didn't feel satisfying enough to have so many cool Pokémon displayed on my screen without being able to interact with them in any way.",
-        jrny:[
-            "I quickly began brainstorming ideas, knowing the game couldn't be overly complex, but I always strive to push my limits. After generating some rough concepts for the game and considering the interface, it was time to gather some Pokémon! Fortunately, the community had generously created multiple resources for this purpose. However, I encountered my first hurdle: all these resources provided APIs to access their data, and I had no knowledge about APIs.",
-            "But then I discovered that they had documented how to use their APIs and the various available endpoints. This meant I only needed to learn how APIs work and how to incorporate them into my game. That's when I came across async-await and Axios, which turned out to be beautiful tools. The joy I felt when encountering my first obstacle and solving it on my own, by reading documentation and articles from fellow developers, made me feel like a developer myself!",
-            "I never realized how amazing APIs could be. I found one or two for everything I needed, from Pokémon data to their types and attacks. In fact, the official Pokémon website itself provides some incredible APIs for the community to use free of charge. With my designs and data prepared, I began writing the code, which involved a lot of JavaScript, nested functions, and numerous query selectors. It was quite a task. However, that was when I stumbled upon jQuery, a small but fast JavaScript library that greatly simplified this process, especially when it came to incorporating animations.",
-            "It took me some time, but eventually I reached a point where I was satisfied with the game and shared it with my friends—a two-player Pokémon game of my own creation! Each Pokémon had random attributes, unique attacks, and strength bars, all battling against each other. To add the finishing touches, I included some music and a dark mode switch for those who preferred a cozy playing environment."
-        ],
-        chal:"Curabitur rhoncus posuere turpis, eget dignissim urna interdum vitae. Donec malesuada, nisl ac tincidunt mollis, mauris erat gravida erat, quis commodo magna nisi eget nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut sit amet odio et tortor dictum elementum at sed risus. Vivamus eget dui commodo, fermentum quam vitae, elementum eros. Vivamus eget nisi dictum, scelerisque purus eget, dictum orci. Quisque fringilla aliquet ligula, eget eleifend leo ullamcorper ut. Nulla scelerisque consequat suscipit. Curabitur mattis leo erat. Praesent sed tortor ultrices orci vulputate faucibus. Fusce laoreet purus non sem euismod, vel ornare augue accumsan. Phasellus quis finibus diam."
-    }
 ]
 
 export const experienceData=[
