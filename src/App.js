@@ -8,7 +8,7 @@ import Resume from "./Resume/Resume.js";
 import About from "./About/About.js";
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSmile, faFilePdf, faBriefcase, faPalette, faPaintBrush } from '@fortawesome/free-solid-svg-icons'
+import { faSmile, faFileAlt, faBriefcase, faPalette, faPaintBrush } from '@fortawesome/free-solid-svg-icons'
 import { Fragment } from "react";
 
 
@@ -43,7 +43,7 @@ class App extends React.Component {
       { name: "Projects", icon: faPaintBrush},
       { name: "Profile", icon: faSmile},
       { name: "Experience", icon: faBriefcase},
-      { name: "Resume", icon: faFilePdf},
+      { name: "Resume", icon: faFileAlt},
     ];
 
     return (

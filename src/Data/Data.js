@@ -1,8 +1,8 @@
 export const projectData=[
     {
         id:"lorestore",
-        img:"https://github.com/dhirajksharma/thelorestore-frontend/blob/main/public/android-chrome-512x512.png?raw=true",
-        cover:"https://github.com/dhirajksharma/thelorestore-frontend/blob/main/src/res/thumb.jpg?raw=true",
+        img:"https://drive.google.com/uc?export=view&id=148vl_PnAfNcMJBI0cMcJyuubBH1L1qkX",
+        cover:"https://drive.google.com/uc?export=view&id=1H9hEYrtmnl-zXOB1aQ_Q7Rz8D7MXJY18",
         tag:["MongoDB", "Express.JS", "React.JS", "TailwindCSS"],
         link:"https://thelorestore.vercel.app/",
         title:"The Lore Store",
@@ -19,8 +19,8 @@ export const projectData=[
     },
     {
         id:"psreact",
-        img:"https://github.com/dhirajksharma/reactgames/blob/main/src/res/logo.png?raw=true",
-        cover:"https://github.com/dhirajksharma/reactgames/blob/main/public/react-games.jpg?raw=true",
+        img:"https://drive.google.com/uc?export=view&id=1brxQmYZzphX5qSJJG3Bx0HrMEaPfXDgE",
+        cover:"https://drive.google.com/uc?export=view&id=1qey7E24Wbn-8wAb0KIts-NNUDP8RsO1p",
         tag:["React.JS","TailwindCSS"],
         link:"https://psreact.vercel.app",
         title:"PS React",
