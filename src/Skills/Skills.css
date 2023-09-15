@@ -1,12 +1,16 @@
-/* myComponent.css */
-
 .myBubbleUI {
 	width: 100%;
 	height: 700px;
 	border-radius: 50px;
     margin: auto;
-    
 }
+
+@media (min-width:640px){
+    .myBubbleUI{
+        height: 100%;
+    }
+}
+
 
 .child {
 	width: 0;

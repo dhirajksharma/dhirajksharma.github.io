@@ -102,31 +102,31 @@ class Head extends React.Component{
                 </div>
 
                 <div id='divi1' className="">
-                <p className="hideIntro my-3 sm:mt-8 lg:mt-2 w-[260px] sm:w-[470px] lg:w-[260px] sm:text-2xl lg:text-base text-center font-medium font-outfit text-gray-700">
+                <p className="hideIntro my-3 sm:mt-8 lg:mt-2 w-[260px] sm:w-[470px] lg:w-[260px] 2xl:w-[300px] sm:text-2xl lg:text-base 2xl:text-xl text-center font-medium font-outfit text-gray-700">
                     {
                         ((window.innerWidth>=640 && window.innerWidth<1024)?"Hi, I'm Dhiraj Sharma. ":"")
                     }
                     An aspiring FrontEnd Developer, with particular interests in UI/UX Design, Comics and Chai &#9749;
                     </p>
-                <p className="hideIntro text-center font-bold text-2xl sm:text-4xl lg:text-2xl sm:mt-6 lg:mt-0 text-gray-700 font-comforter tracking-widest">@Kolkata, India</p>
+                <p className="hideIntro text-center font-bold text-2xl sm:text-4xl lg:text-2xl 2xl:text-3xl sm:mt-6 lg:mt-0 2xl:mt-4 text-gray-700 font-comforter tracking-widest">@Kolkata, India</p>
                 </div>
 
                 <div className="hideButton">
-                    <div id="foot" className='text-2xl flex flex-row text-cyan-800 justify-center'>
-                        <button onClick={()=>{this.setState({activeTab:0}); this.props.handleMobileNav(0)}}><FontAwesomeIcon icon={faPalette} className={`socialinks sm:text-3xl lg:text-2xl ${this.state.activeTab===0 && "text-blue-500 border-blue-500 "}`}/></button>
-                        <button onClick={()=>{this.setState({activeTab:1}); this.props.handleMobileNav(1)}}><FontAwesomeIcon icon={faPaintBrush} className={`socialinks text-xl sm:text-2xl lg:text-xl py-3 px-[11px] sm:py-[0.8rem] lg:py-3 ${this.state.activeTab===1 && "text-blue-500 border-blue-500"}`}/></button>
-                        <button onClick={()=>{this.setState({activeTab:3}); this.props.handleMobileNav(3)}}><FontAwesomeIcon icon={faBriefcase} className={`socialinks sm:text-3xl lg:text-2xl ${this.state.activeTab===3 && "text-blue-500 border-blue-500"}`}/></button>
+                    <div id="foot" className='text-2xl sm:text-3xl lg:text-2xl 2xl:text-3xl flex flex-row text-cyan-800 justify-center'>
+                        <button onClick={()=>{this.setState({activeTab:0}); this.props.handleMobileNav(0)}}><FontAwesomeIcon icon={faPalette} className={`socialinks ${this.state.activeTab===0 && "text-blue-500 border-blue-500 "}`}/></button>
+                        <button onClick={()=>{this.setState({activeTab:1}); this.props.handleMobileNav(1)}}><FontAwesomeIcon icon={faPaintBrush} className={`socialinks text-xl sm:text-2xl lg:text-xl 2xl:text-2xl py-3 px-[11px] sm:py-[0.8rem] lg:py-3 2xl:py-[0.8rem] ${this.state.activeTab===1 && "text-blue-500 border-blue-500"}`}/></button>
+                        <button onClick={()=>{this.setState({activeTab:3}); this.props.handleMobileNav(3)}}><FontAwesomeIcon icon={faBriefcase} className={`socialinks ${this.state.activeTab===3 && "text-blue-500 border-blue-500"}`}/></button>
                         
                         <div className="flex flex-col relative">
-                            <div id="socialink" className="absolute hidden bg-white opacity-0 right-[3.35rem] sm:right-[3.8rem] lg:right-[3.35rem]">
-                                <button><a href="https://in.linkedin.com/in/dhirajksharma29" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedinIn} className="socialinks sm:text-3xl lg:text-2xl px-3"/></a></button>
-                                <button><a href="https://github.com/dhirajksharma" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithubAlt} className="socialinks sm:text-3xl lg:text-2xl px-[11px]"/></a></button>
-                                <button><a href="https://dhirajksharma.medium.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faMedium} className="socialinks text-xl sm:text-2xl lg:text-xl py-3"/></a></button> 
+                            <div id="socialink" className="absolute hidden bg-white opacity-0 right-[3.35rem] sm:right-[3.8rem] lg:right-[3.35rem] 2xl:right-[3.8rem]">
+                                <button><a href="https://in.linkedin.com/in/dhirajksharma29" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedinIn} className="socialinks px-3"/></a></button>
+                                <button><a href="https://github.com/dhirajksharma" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithubAlt} className="socialinks px-[11px]"/></a></button>
+                                <button><a href="https://dhirajksharma.medium.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faMedium} className="socialinks text-xl sm:text-2xl lg:text-xl 2xl:text-2xl py-3"/></a></button> 
                             </div>
                             <button
                                 id="socialbtn"
                                 onClick={this.toggleSocial}>
-                                <FontAwesomeIcon icon={faLink} className="socialinks text-xl py-3 sm:text-2xl lg:text-xl sm:py-[0.8rem] lg:py-3 cursor-pointer"/>
+                                <FontAwesomeIcon icon={faLink} className="socialinks text-xl sm:text-2xl lg:text-xl 2xl:text-2xl py-3 sm:py-[0.8rem] lg:py-3 2xl:py-[0.8rem] cursor-pointer"/>
                             </button>
                         </div>
                        
@@ -134,8 +134,8 @@ class Head extends React.Component{
                     
                     <a href="mailto:dhirajksharma.official@gmail.com" target="_blank" rel="noreferrer">
                     <button
-                        className="bg-blue-300 hover:opacity-[0.92] py-3 my-4 rounded-xl font-montserrat min-w-[250px] flex justify-center items-center sm:text-2xl lg:text-base sm:w-[300px] lg:w-[250px] sm:mt-6 lg:mt-4">
-                            <FontAwesomeIcon icon={faEnvelope} className="text-2xl mr-2 sm:text-4xl lg:text-2xl"/>
+                        className="bg-blue-300 hover:opacity-[0.92] py-3 my-4 rounded-xl font-montserrat min-w-[250px] flex justify-center items-center sm:text-2xl lg:text-base 2xl:text-xl sm:w-[300px] lg:w-[250px] 2xl:w-[300px] sm:mt-6 lg:mt-4">
+                            <FontAwesomeIcon icon={faEnvelope} className="text-2xl mr-2 sm:text-4xl lg:text-2xl 2xl:text-4xl"/>
                             Let's Connect!
                     </button>
                     </a>

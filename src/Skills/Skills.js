@@ -27,12 +27,12 @@ class Skills extends React.Component{
     }
     
     render(){
-      const options = {
+      const options1 = {
         size: 170,
         minSize: 20,
         gutter: 8,
         provideProps: false,
-        numCols: `${window.innerWidth<700?4:5}`,
+        numCols: 4,
         fringeWidth: 150,
         yRadius: 130,
         xRadius: 165,
@@ -42,15 +42,61 @@ class Skills extends React.Component{
         gravitation: 5
       }
 
+      const options2 = {
+        size: 200,
+        minSize: 50,
+        gutter: 12,
+        provideProps: false,
+        numCols: 4,
+        fringeWidth: 150,
+        yRadius: 200,
+        xRadius: 200,
+        cornerRadius: 50,
+        showGuides: false,
+        compact: false,
+        gravitation: 15
+      }
+
+      const options3 = {
+        size: 170,
+        minSize: 40,
+        gutter: 8,
+        provideProps: false,
+        numCols: 5,
+        fringeWidth: 150,
+        yRadius: 150,
+        xRadius: 150,
+        cornerRadius: 50,
+        showGuides: false,
+        compact: false,
+        gravitation: 5
+      }
+
+      const options4 = {
+        size: 200,
+        minSize: 50,
+        gutter: 12,
+        provideProps: false,
+        numCols: 5,
+        fringeWidth: 140,
+        yRadius: 170,
+        xRadius: 170,
+        cornerRadius: 50,
+        showGuides: true,
+        compact: false,
+        gravitation: 5
+      }
+
+
         return (
           <div className="w-full h-full flex flex-col">
             {
                 (window.innerWidth >=1024 &&
-                    <div className="font-outfit text-lg mt-2 text-text">
+                    <div className="font-outfit text-lg 2xl:text-2xl mt-2 text-text">
                     Skills
                     </div>)
             }
-            <BubbleUI options={options} className="myBubbleUI hideBubble">
+            <BubbleUI options={window.innerWidth<640?options1:window.innerWidth<1080?options2:window.innerWidth<1536?options3:options4} className="myBubbleUI hideBubble">
                 
                 <div className="child bg-[#03599C]">
                     <div className="children childrenDiv">
@@ -186,7 +232,7 @@ class Skills extends React.Component{
                     </div>                 
                     <p className="children childrenPara text-white">MySQL</p>
                 </div>
-	          </BubbleUI>
+	        </BubbleUI>
           </div>
         );
     }

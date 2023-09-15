@@ -35,7 +35,7 @@ class App extends React.Component {
     setTimeout(() => {
       $('#typewriterContainer').fadeOut(500);
       $('#appHolder').fadeIn(500).css('display','flex');
-    }, 3500);
+    }, 300);
   }
   render(){
     const menus = [
@@ -50,16 +50,16 @@ class App extends React.Component {
         <Fragment>
         <div id='typewriterContainer' className="h-[100dvh] w-full bg-white flex items-center justify-center">
           <div class="typewriter w-fit">
-            <h1 className="text-xl sm:text-2xl lg:text-xl font-montserrat font-semibold">Greetings Visitor!</h1>
+            <h1 className="text-xl sm:text-2xl lg:text-xl xl:text-2xl 2xl:text-3xl font-montserrat font-semibold">Greetings Visitor!</h1>
           </div>
         </div>
         
         <div id='appHolder' className="hidden justify-center items-center h-[100dvh]">
-          <div id='app' className="h-[100dvh] flex flex-col items-center lg:w-[380px] lg:ml-4 lg:h-[95dvh] lg:border lg:rounded-md border-solid border-fuchsia-900">
+          <div id='app' className="h-[100dvh] lg:h-[95dvh] lg:aspect-[3/5] flex flex-col items-center xl:items-start lg:ml-4 lg:border lg:rounded-md border-solid border-fuchsia-900">
 
-            <div className="flex justify-between items-center w-screen h-[80px] sm:h-[120px] lg:h-[80px] lg:w-full">
-                      <h1 className="ml-5 sm:ml-6 mr-0 text-2xl sm:text-3xl lg:text-2xl font-bold font-outfit tracking-wide">Dhiraj</h1>
-                      <h1 className="mr-5 sm:mr-6 ml-0 text-right sm:text-xl lg:text-base font-outfit font-light leading-5">Frontend Designer<br></br> & Developer</h1>
+            <div className="flex justify-between items-center pt-2 w-screen h-[80px] sm:h-[120px] lg:h-[70px] 2xl:h-[100px] lg:w-full">
+              <h1 className="ml-5 sm:ml-6 mr-0 text-2xl sm:text-3xl lg:text-2xl 2xl:text-3xl font-bold font-outfit tracking-wider">Dhiraj</h1>
+              <h1 className="mr-5 sm:mr-6 ml-0 text-right sm:text-xl lg:text-base 2xl:text-2xl font-outfit font-light leading-5">Frontend Designer<br></br> & Developer</h1>
             </div>
 
             <div id='' className="h-[calc(100dvh-140px)] sm:h-[calc(100dvh-200px)] lg:h-full w-screen lg:w-full overflow-scroll containerDiv">
