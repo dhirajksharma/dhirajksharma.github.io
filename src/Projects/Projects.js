@@ -114,13 +114,13 @@ class Projects extends React.Component{
               <div className="flex justify-center w-full">
                 <a href={prj.link} target="_blank" rel="noreferrer">
                   <button
-                    className="bg-blue-300 hover:opacity-90 py-3 my-4 sm:mb-8 sm:text-xl lg:text-base 2xl:text-xl sm:rounded-xl lg:rounded-lg rounded-lg font-montserrat w-[90vw] max-w-[500px] lg:w-[250px] flex justify-center items-center lg:mx-2">
+                    className="bg-blue-300 lg:bg-white lg:border-2 lg:border-blue-300 lg:hover:bg-blue-300 py-3 lg:py-2 my-4 sm:mb-8 sm:text-xl lg:text-base 2xl:text-xl rounded-full font-montserrat w-[90vw] max-w-[500px] lg:w-[200px] flex justify-center items-center lg:mx-2">
                       Checkout!
                   </button>
                 </a>
                 <button
                   onClick={()=>this.handleProjectDetailsToggle(prj.id)}
-                  className="hidden bg-gray-100 opacity-80 hover:opacity-100 py-3 mt-4 mb-8 text-base 2xl:text-xl rounded-lg font-montserrat w-[250px] lg:flex justify-center items-center lg:mx-2">
+                  className="hidden bg-gray-100 hover:bg-gray-200 py-2 mt-4 mb-8 text-base 2xl:text-xl rounded-full font-montserrat w-[200px] lg:flex justify-center items-center lg:mx-2">
                     Go Back
                 </button>
               </div>

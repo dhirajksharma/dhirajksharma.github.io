@@ -35,7 +35,7 @@ class App extends React.Component {
     setTimeout(() => {
       $('#typewriterContainer').fadeOut(500);
       $('#appHolder').fadeIn(500).css('display','flex');
-    }, 300);
+    }, 3500);
   }
   render(){
     const menus = [
@@ -55,7 +55,7 @@ class App extends React.Component {
         </div>
         
         <div id='appHolder' className="hidden justify-center items-center h-[100dvh]">
-          <div id='app' className="h-[100dvh] lg:h-[95dvh] lg:aspect-[3/5] flex flex-col items-center xl:items-start lg:ml-4 lg:border lg:rounded-md border-solid border-fuchsia-900">
+          <div id='app' className="h-[100dvh] lg:h-[95dvh] lg:aspect-[3/5] flex flex-col items-center xl:items-start lg:ml-4 lg:border lg:rounded-2xl border-solid border-fuchsia-900">
 
             <div className="flex justify-between items-center pt-2 w-screen h-[80px] sm:h-[120px] lg:h-[70px] 2xl:h-[100px] lg:w-full">
               <h1 className="ml-5 sm:ml-6 mr-0 text-2xl sm:text-3xl lg:text-2xl 2xl:text-3xl font-bold font-outfit tracking-wider">Dhiraj</h1>

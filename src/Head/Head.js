@@ -134,7 +134,7 @@ class Head extends React.Component{
                     
                     <a href="mailto:dhirajksharma.official@gmail.com" target="_blank" rel="noreferrer">
                     <button
-                        className="bg-blue-300 hover:opacity-[0.92] py-3 my-4 rounded-xl font-montserrat min-w-[250px] flex justify-center items-center sm:text-2xl lg:text-base 2xl:text-xl sm:w-[300px] lg:w-[250px] 2xl:w-[300px] sm:mt-6 lg:mt-4">
+                        className="bg-blue-300 hover:bg-blue-400 hover:text-white py-3 my-4 rounded-full font-montserrat min-w-[250px] flex justify-center items-center sm:text-2xl lg:text-base 2xl:text-xl sm:w-[300px] lg:w-[250px] 2xl:w-[300px] sm:mt-6 lg:mt-4">
                             <FontAwesomeIcon icon={faEnvelope} className="text-2xl mr-2 sm:text-4xl lg:text-2xl 2xl:text-4xl"/>
                             Let's Connect!
                     </button>
