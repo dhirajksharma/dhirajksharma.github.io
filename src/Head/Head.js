@@ -98,7 +98,7 @@ class Head extends React.Component{
         return (
             <div className="flex flex-col items-center justify-evenly h-full">
                 <div id="myface" className="blurred-img aspect-square rounded-md max-w-[65%] sm:max-w-[60%] hideFace">
-                    <img src={me} loading="eager" className="shadow-lg rounded-md shadow-slate-400"></img>
+                    <img alt='mypic' src={me} loading="eager" className="shadow-lg rounded-md shadow-slate-400"></img>
                 </div>
 
                 <div id='divi1' className="">

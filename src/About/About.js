@@ -2,10 +2,6 @@ import React from "react";
 import './About.css';
 
 class About extends React.Component{
-  constructor(props) {
-    super(props);
-    
-}
 
 nameobserver=new IntersectionObserver((entries)=>{
   entries.forEach((entry)=>{

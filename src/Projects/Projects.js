@@ -60,7 +60,7 @@ class Projects extends React.Component{
                 onClick={()=>this.handleProjectDetailsToggle(prj.id)}>
                 
                 <div className="flex items-center justify-between pr-4 mt-4 mb-2 2xl:mb-3">
-                  <img src={prj.img} loading="eager" className="w-10 sm:w-14 lg:w-12 2xl:w-14 aspect-square rounded-md bg-gray-100"></img>
+                  <img alt='project-thumbnail' src={prj.img} loading="eager" className="w-10 sm:w-14 lg:w-12 2xl:w-14 aspect-square rounded-md bg-gray-100"></img>
                   <a href={prj.link} target="_blank" rel="noreferrer" onClick={(e)=>e.stopPropagation()}>
                     <FontAwesomeIcon icon={faArrowRight} className="text-xl lg:text-lg -rotate-45 text-blue-400 border-2 border-solid rounded-full py-[5px] px-[6px] border-blue-400 hover:rotate-[10]"/>
                   </a>
@@ -92,8 +92,8 @@ class Projects extends React.Component{
                   className="absolute top-2 left-3 text-white text-xl sm:text-2xl mix-blend-difference opacity-0">
                   <FontAwesomeIcon icon={faArrowLeft} className=""/>
                 </button>
-                <img src={prj.cover} className="w-full rounded-t-lg"></img>
-                <img src={prj.img} className="w-14 sm:w-16 lg:w-14 aspect-square rounded-md absolute -bottom-[1.3rem] left-[0.6rem] sm:left-[1rem] bg-gray-100"></img>
+                <img alt='project-cover' src={prj.cover} className="w-full rounded-t-lg"></img>
+                <img alt='project-main' src={prj.img} className="w-14 sm:w-16 lg:w-14 aspect-square rounded-md absolute -bottom-[1.3rem] left-[0.6rem] sm:left-[1rem] bg-gray-100"></img>
               </div>
 
               <div className="w-[95%] lg:w-full mt-7 lg:mt-2 lg:pr-10">
@@ -102,7 +102,7 @@ class Projects extends React.Component{
                 <p className="font-montserrat text-justify text-sm sm:text-base 2xl:text-lg lg:tracking-wide">{prj.intro}</p>
                 <h2 className="mt-1 sm:mt-2 lg:mt-4 sm:text-xl lg:text-base 2xl:text-xl font-outfit font-medium tracking-wide lg:tracking-wider">Inspiration</h2>
                 <p className="font-montserrat text-justify text-sm sm:text-base 2xl:text-lg lg:tracking-wide">{prj.insp}</p>
-                <img src={prj.cover} className="hidden lg:block w-4/5 mx-auto my-3 rounded-lg"></img>
+                <img alt='project-cover' src={prj.cover} className="hidden lg:block w-4/5 mx-auto my-3 rounded-lg"></img>
                 <h2 className="mt-1 -mb-3 sm:mt-2 lg:mt-4 sm:text-xl lg:text-base 2xl:text-xl font-outfit font-medium tracking-wide lg:tracking-wider">Journey</h2>
                 {
                   prj.jrny.map(para=>(

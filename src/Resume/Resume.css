@@ -1,0 +1,170 @@
+
+.drive-loader {
+  
+    /* configuration vars */
+    --fold-thickness: 0.7; /* 0 is no fold, 1 is no hole */
+    --loader-easing: cubic-bezier(0.6, 0, 0, 1);
+    --loader-duration: 5s;
+    --yellow: #ffd14f;
+    --blue: #4486f4;
+    --green: #28a468;
+    
+    /* derived vars */ 
+    --fold-thickness-derived: calc(var(--fold-thickness) * 100% / (2*var(--sqrt-3)));
+    --fold-bevel: calc(2 * var(--fold-thickness-derived) / var(--sqrt-3));
+    
+    /* constant vars */
+    --sqrt-3: 1.732050807568877;
+    --y-scale: calc(2/var(--sqrt-3));
+    
+    width: 100%;
+    padding-top: calc(100% * var(--sqrt-3) / 2);
+  
+    position: relative;
+    margin-top: calc(-1 * var(--fold-thickness-derived));
+    
+    filter: drop-shadow(0px 0px 20px rgba(0,0,0,0.3));
+  
+    transform-origin: 50% 66.67%;
+    backface-visibility: hidden;
+    animation: drive-loader var(--loader-easing) var(--loader-duration) infinite;
+  }
+  
+  @keyframes drive-loader {
+    0% { transform: rotate(0deg); }
+    5% { transform: rotate(0deg); }
+  
+    32.33% { transform: rotate(120deg); }
+    34.33% { transform: rotate(120deg); }
+  
+    65.66% { transform: rotate(240deg);  }
+    67.66% { transform: rotate(240deg); }
+  
+    95% { transform: rotate(360deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  
+  .drive-loader .fold{
+    
+    /* fold dependant */
+    clip-path: var(--fold-polygon);
+    background-color: var(--fold-color);
+    
+    /* fold independant */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+  }
+  
+  .drive-loader .fold::before,
+  .drive-loader .fold::after {
+    
+    /* fold dependant */
+    top: var(--fold-y);
+    left: var(--fold-x);
+    transform: rotate(var(--fold-angle)) skewY(30deg) translateY(-100%);
+    
+    /* fold independant */
+    content: "";
+    position: absolute;
+    width: var(--fold-thickness-derived);
+    height: calc(
+      (100% - 2 * var(--fold-thickness-derived) * var(--y-scale))
+      * 2 / var(--sqrt-3)
+    );
+    transform-origin: 0 0;
+    
+  }
+  
+  
+  .drive-loader .fold::before {
+    background-color: var(--fold-next-color);
+    animation: fold-next var(--loader-easing) var(--loader-duration) infinite;
+  }
+  
+  @keyframes fold-next {
+    0% { transform: rotate(var(--fold-angle)) skewY(30deg) translateY(-100%); }
+    32.33% { transform: rotate(var(--fold-angle)) skewY(30deg) translateY(0%); }
+    34.33% { transform: rotate(var(--fold-angle)) skewY(30deg) translateY(0%); }
+    66.66% { transform: rotate(var(--fold-angle)) skewY(30deg) translateY(100%); }
+    100% { transform: rotate(var(--fold-angle)) skewY(30deg) translateY(100%); }
+  }
+  
+  
+  
+  .drive-loader .fold::after {
+    background-color: var(--fold-next-next-color);
+    animation: fold-next-next var(--loader-easing) var(--loader-duration) infinite;
+  }
+  
+  @keyframes fold-next-next {
+    0% { transform: rotate(var(--fold-angle)) skewY(30deg) translateY(-100%); }
+    33.33% { transform: rotate(var(--fold-angle)) skewY(30deg) translateY(-100%); }
+    65.66% { transform: rotate(var(--fold-angle)) skewY(30deg) translateY(0%); }
+    67.66% { transform: rotate(var(--fold-angle)) skewY(30deg) translateY(0%); }
+    100% { transform: rotate(var(--fold-angle)) skewY(30deg) translateY(100%); }
+  }
+  
+  
+  
+  .drive-loader .fold.yellow {
+    --fold-polygon: polygon(
+      calc(50% - var(--fold-bevel)/2) calc(var(--fold-thickness-derived) * var(--y-scale)),
+      calc(50% + var(--fold-bevel)/2) calc(var(--fold-thickness-derived) * var(--y-scale)),
+      calc(100% - var(--fold-bevel)/2) calc(100% - var(--fold-thickness-derived) * var(--y-scale)),
+      calc(100% - 1.5 * var(--fold-bevel)) calc(100% - var(--fold-thickness-derived) * var(--y-scale))
+    );
+  
+    --fold-color: var(--yellow);
+    --fold-next-color: var(--blue);
+    --fold-next-next-color: var(--green);
+    --fold-angle: -30deg;
+  
+    --fold-y: calc(var(--fold-thickness-derived) * var(--y-scale));
+    --fold-x: calc(50% - var(--fold-bevel)/2);
+    --fold-length: ;
+  }
+  
+  .drive-loader .fold.blue {
+    --fold-polygon: polygon(
+      calc(100% - 0.5 * var(--fold-bevel)) calc(100% - var(--fold-thickness-derived) * var(--y-scale)),
+      calc(100% - var(--fold-bevel)) 100%,
+      var(--fold-bevel) 100%,
+      calc(1.5 * var(--fold-bevel)) calc(100% - var(--fold-thickness-derived) * var(--y-scale))
+    );
+  
+    --fold-color: var(--blue);
+    --fold-next-color: var(--green);
+    --fold-next-next-color: var(--yellow);
+    --fold-angle: 90deg;
+  
+    --fold-y: calc(100% - var(--fold-thickness-derived) * var(--y-scale));
+    --fold-x: calc(100% - var(--fold-bevel)/2);
+  }
+  
+  .drive-loader .fold.green {
+    --fold-polygon: polygon(
+      var(--fold-bevel) 100%,
+      calc(var(--fold-bevel)/2) calc(100% - var(--fold-thickness-derived) * var(--y-scale)),
+      calc(50% - var(--fold-bevel)/2) calc(var(--fold-thickness-derived) * var(--y-scale)),
+      50% calc(2 * var(--fold-thickness-derived) * var(--y-scale))
+    );
+    
+    --fold-color: var(--green);
+    --fold-next-color: var(--yellow);
+    --fold-next-next-color: var(--blue);
+    --fold-angle: -150deg;
+    
+    --fold-y: 100%;
+    --fold-x: var(--fold-bevel);
+  }
+  
+  .main-wrapper {
+    width: 50%;
+    max-width: 500px;
+  }
+  
