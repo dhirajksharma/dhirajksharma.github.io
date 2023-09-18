@@ -54,7 +54,7 @@ class App extends React.Component {
           </div>
         </div>
         
-        <div id='appHolder' className="hidden justify-center items-center h-[100dvh]">
+        <div id='appHolder' className="hidden justify-center items-center h-[100dvh] relative">
           <div id='app' className="h-[100dvh] lg:h-[95dvh] lg:aspect-[3/5] flex flex-col items-center xl:items-start lg:ml-4 lg:border lg:rounded-2xl border-solid border-fuchsia-900">
 
             <div className="flex justify-between items-center pt-2 w-screen h-[80px] sm:h-[120px] lg:h-[70px] 2xl:h-[100px] lg:w-full">
