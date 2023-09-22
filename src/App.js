@@ -90,7 +90,7 @@ class App extends React.Component {
                               onClick={() => this.handleMobileNav(i)}>
                               
                               <span
-                                className={`text-2xl sm:text-3xl cursor-pointer duration-500 -translate-y-3 ${i === this.state.activeTab && "-mt-6"}`}>
+                                className={`text-2xl sm:text-4xl cursor-pointer duration-500 -translate-y-3 ${i === this.state.activeTab && "-mt-6"}`}>
                                 <FontAwesomeIcon icon={menu.icon} className={i===this.state.activeTab?"text-blue-400 scale-125 duration-500":"text-cyan-800"}/>
                               </span>
                           
