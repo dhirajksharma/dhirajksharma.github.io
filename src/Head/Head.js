@@ -106,7 +106,7 @@ class Head extends React.Component{
                     {
                         ((window.innerWidth>=640 && window.innerWidth<1024)?"Hi, I'm Dhiraj Sharma. ":"")
                     }
-                    An aspiring FrontEnd Developer, with particular interests in UI/UX Design, Comics and Chai &#9749;
+                    An aspiring FrontEnd Developer, with particular interests in UI/UX design, and romantic comedies &#127871;
                     </p>
                 <p className="hideIntro text-center font-bold text-2xl sm:text-4xl lg:text-2xl 2xl:text-3xl sm:mt-6 lg:mt-0 2xl:mt-4 text-gray-700 font-comforter tracking-widest">@Kolkata, India</p>
                 </div>
