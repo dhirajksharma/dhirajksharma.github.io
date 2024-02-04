@@ -3,8 +3,8 @@ import me from './me1.jpg'
 import $ from 'jquery'
 import './Head.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faLink, faBriefcase, faPalette, faPaintBrush } from '@fortawesome/free-solid-svg-icons'
-import { faGithubAlt, faLinkedinIn, faMedium} from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope, faLink, faBriefcase, faPalette, faPaintBrush, faCode } from '@fortawesome/free-solid-svg-icons'
+import { faGithubAlt, faLinkedinIn} from '@fortawesome/free-brands-svg-icons'
 
 class Head extends React.Component{
     constructor(props){
@@ -101,7 +101,7 @@ class Head extends React.Component{
                     <img alt='mypic' src={me} loading="eager" className="shadow-lg rounded-md shadow-slate-400"></img>
                 </div>
 
-                <div id='divi1' className="">
+                <div id='divi1' className="min-h-[140px] sm:min-h-[unset] flex flex-col justify-between">
                 <p className="hideIntro my-3 sm:mt-8 lg:mt-2 w-[260px] sm:w-[470px] lg:w-[260px] 2xl:w-[300px] sm:text-2xl lg:text-base 2xl:text-xl text-center font-medium font-outfit text-gray-700">
                     {
                         ((window.innerWidth>=640 && window.innerWidth<1024)?"Hi, I'm Dhiraj Sharma. ":"")
@@ -121,7 +121,7 @@ class Head extends React.Component{
                             <div id="socialink" className="absolute hidden bg-white opacity-0 right-[3.37rem] sm:right-[4.9rem] lg:right-[3.4rem] 2xl:right-[4rem]">
                                 <button><a href="https://in.linkedin.com/in/dhirajksharma29" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedinIn} className="socialinks "/></a></button>
                                 <button><a href="https://github.com/dhirajksharma" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithubAlt} className="socialinks "/></a></button>
-                                <button><a href="https://dhirajksharma.medium.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faMedium} className="socialinks "/></a></button> 
+                                <button><a href="https://leetcode.com/dhirajksharma" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faCode} className="socialinks "/></a></button> 
                             </div>
                             <button
                                 id="socialbtn"
