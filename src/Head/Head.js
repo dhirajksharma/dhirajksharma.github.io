@@ -20,28 +20,28 @@ class Head extends React.Component{
     toggleSocial(){
         if($('#socialink').css('display')==='none'){
             $('#socialink').css('display','flex');
-            $('#socialink').animate({
-                "opacity":"1"
-            },200)
-            $('#socialbtn').animate(
+            $('#socialbtn svg').animate(
                 { deg: 45 },
                 {
                     duration: 250,
                     step: function(now) {
                         $(this).css({ transform: 'rotate(' + now + 'deg)'});
-                    }})
+                }})
+            $('#socialink').delay(250).animate({
+                "opacity":"1"
+            },150)
             $('#socialbtn svg').addClass('text-blue-500 !border-blue-500');
         }else{
-            $('#socialink').animate({
-                "opacity":"0"
-            },200)
-            $('#socialbtn').animate(
+            $('#socialbtn svg').animate(
                 { deg: 0 },
                 {
                     duration: 250,
                     step: function(now) {
                         $(this).css({ transform: 'rotate(' + now + 'deg)' });
-                    }})
+                }})
+            $('#socialink').delay(250).animate({
+                "opacity":"0"
+            },150)
             setTimeout(() => {
                 $('#socialink').css('display','none');
             }, 200);
@@ -113,15 +113,15 @@ class Head extends React.Component{
 
                 <div className="hideButton">
                     <div id="foot" className='sm:mt-5 lg:mt-0 flex flex-row text-cyan-800 justify-center'>
-                        <button onClick={()=>{this.setState({activeTab:0}); this.props.handleMobileNav(0)}}><FontAwesomeIcon icon={faPalette} className={`socialinks ${this.state.activeTab===0 && "text-blue-500 border-blue-500 "}`}/></button>
-                        <button onClick={()=>{this.setState({activeTab:1}); this.props.handleMobileNav(1)}}><FontAwesomeIcon icon={faPaintBrush} className={`socialinks ${this.state.activeTab===1 && "text-blue-500 border-blue-500"}`}/></button>
-                        <button onClick={()=>{this.setState({activeTab:3}); this.props.handleMobileNav(3)}}><FontAwesomeIcon icon={faBriefcase} className={`socialinks ${this.state.activeTab===3 && "text-blue-500 border-blue-500"}`}/></button>
+                        <button className="scalebtn" onClick={()=>{this.setState({activeTab:0}); this.props.handleMobileNav(0)}}><FontAwesomeIcon icon={faPalette} className={`socialinks ${this.state.activeTab===0 && "text-blue-500 border-blue-500 "}`}/></button>
+                        <button className="scalebtn" onClick={()=>{this.setState({activeTab:1}); this.props.handleMobileNav(1)}}><FontAwesomeIcon icon={faPaintBrush} className={`socialinks ${this.state.activeTab===1 && "text-blue-500 border-blue-500"}`}/></button>
+                        <button className="scalebtn" onClick={()=>{this.setState({activeTab:3}); this.props.handleMobileNav(3)}}><FontAwesomeIcon icon={faBriefcase} className={`socialinks ${this.state.activeTab===3 && "text-blue-500 border-blue-500"}`}/></button>
                         
                         <div className="flex flex-col relative">
                             <div id="socialink" className="absolute hidden bg-white opacity-0 right-[3.37rem] sm:right-[4.9rem] lg:right-[3.4rem] 2xl:right-[4rem]">
-                                <button><a href="https://in.linkedin.com/in/dhirajksharma29" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedinIn} className="socialinks "/></a></button>
-                                <button><a href="https://github.com/dhirajksharma" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithubAlt} className="socialinks "/></a></button>
-                                <button><a href="https://leetcode.com/dhirajksharma" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faCode} className="socialinks "/></a></button> 
+                                <button className="scalebtn"><a href="https://in.linkedin.com/in/dhirajksharma29" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedinIn} className="socialinks "/></a></button>
+                                <button className="scalebtn"><a href="https://github.com/dhirajksharma" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithubAlt} className="socialinks "/></a></button>
+                                <button className="scalebtn"><a href="https://leetcode.com/dhirajksharma" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faCode} className="socialinks "/></a></button> 
                             </div>
                             <button
                                 id="socialbtn"
@@ -132,7 +132,7 @@ class Head extends React.Component{
                        
                     </div>
                     
-                    <a href="mailto:dhirajksharma.official@gmail.com" target="_blank" rel="noreferrer">
+                    <a href="mailto:dhirajksharma.official@gmail.com" rel="noreferrer">
                     <button
                         className="bg-blue-300 hover:bg-blue-400 hover:text-white py-3 my-4 rounded-full font-montserrat min-w-[250px] flex justify-center items-center sm:text-2xl lg:text-base 2xl:text-xl w-full sm:w-[400px] lg:w-full 2xl:w-[300px] sm:py-[18px] lg:py-3 sm:mt-6 lg:mt-4">
                             <FontAwesomeIcon icon={faEnvelope} className="text-2xl mr-2 sm:text-4xl lg:text-2xl 2xl:text-4xl"/>
