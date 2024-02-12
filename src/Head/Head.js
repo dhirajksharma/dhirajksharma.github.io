@@ -113,19 +113,39 @@ class Head extends React.Component{
 
                 <div className="hideButton">
                     <div id="foot" className='sm:mt-5 lg:mt-0 flex flex-row text-cyan-800 justify-center'>
-                        <button className="scalebtn" onClick={()=>{this.setState({activeTab:0}); this.props.handleMobileNav(0)}}><FontAwesomeIcon icon={faPalette} className={`socialinks ${this.state.activeTab===0 && "text-blue-500 border-blue-500 "}`}/></button>
-                        <button className="scalebtn" onClick={()=>{this.setState({activeTab:1}); this.props.handleMobileNav(1)}}><FontAwesomeIcon icon={faPaintBrush} className={`socialinks ${this.state.activeTab===1 && "text-blue-500 border-blue-500"}`}/></button>
-                        <button className="scalebtn" onClick={()=>{this.setState({activeTab:3}); this.props.handleMobileNav(3)}}><FontAwesomeIcon icon={faBriefcase} className={`socialinks ${this.state.activeTab===3 && "text-blue-500 border-blue-500"}`}/></button>
+                        <button className="tooltip scalebtn" onClick={()=>{this.setState({activeTab:0}); this.props.handleMobileNav(0)}}>
+                            <span className="tooltiptext">Skills</span>
+                            <FontAwesomeIcon icon={faPalette} className={`socialinks ${this.state.activeTab===0 && "text-blue-500 border-blue-500 "}`}/>
+                        </button>
+                        <button className="tooltip scalebtn" onClick={()=>{this.setState({activeTab:1}); this.props.handleMobileNav(1)}}>
+                            <span className="tooltiptext">Projects</span>
+                            <FontAwesomeIcon icon={faPaintBrush} className={`socialinks ${this.state.activeTab===1 && "text-blue-500 border-blue-500"}`}/>
+                        </button>
+                        <button className="tooltip scalebtn" onClick={()=>{this.setState({activeTab:3}); this.props.handleMobileNav(3)}}>
+                            <span className="tooltiptext">Experience</span>
+                            <FontAwesomeIcon icon={faBriefcase} className={`socialinks ${this.state.activeTab===3 && "text-blue-500 border-blue-500"}`}/>
+                        </button>
                         
                         <div className="flex flex-col relative">
                             <div id="socialink" className="absolute hidden bg-white opacity-0 right-[3.37rem] sm:right-[4.9rem] lg:right-[3.4rem] 2xl:right-[4rem]">
-                                <button className="scalebtn"><a href="https://in.linkedin.com/in/dhirajksharma29" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedinIn} className="socialinks "/></a></button>
-                                <button className="scalebtn"><a href="https://github.com/dhirajksharma" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithubAlt} className="socialinks "/></a></button>
-                                <button className="scalebtn"><a href="https://leetcode.com/dhirajksharma" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faCode} className="socialinks "/></a></button> 
+                                <button className="scalebtn tooltip">
+                                    <span className="tooltiptext">LinkedIn</span>
+                                    <a href="https://in.linkedin.com/in/dhirajksharma29" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedinIn} className="socialinks "/></a>
+                                </button>
+                                <button className="scalebtn tooltip">
+                                    <span className="tooltiptext">GitHub</span>
+                                    <a href="https://github.com/dhirajksharma" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithubAlt} className="socialinks "/></a>
+                                </button>
+                                <button className="scalebtn tooltip">
+                                    <span className="tooltiptext">LeetCode</span>
+                                    <a href="https://leetcode.com/dhirajksharma" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faCode} className="socialinks "/></a>
+                                    </button> 
                             </div>
                             <button
                                 id="socialbtn"
+                                className="tooltip"
                                 onClick={this.toggleSocial}>
+                                <span className="tooltiptext">Social Profiles</span>
                                 <FontAwesomeIcon icon={faLink} className="socialinks cursor-pointer"/>
                             </button>
                         </div>
