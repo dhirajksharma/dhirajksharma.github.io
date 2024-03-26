@@ -38,8 +38,8 @@ render(){
         }
         {
           experienceData.map(exp => (
-            <div className="w-[90vw] lg:w-[90%] border-l border-solid border-black relative hidingExpDiv">
-              <div className="w-[14px] 2xl:w-4 aspect-square bg-slate-700 rounded-full absolute -left-[7px] top-[18px]">
+            <div className="exp w-[90vw] lg:w-[90%] border-l border-solid border-black relative hidingExpDiv">
+              <div className="dot w-[14px] 2xl:w-4 aspect-square bg-slate-700 rounded-full absolute -left-[7px] top-[18px]">
               </div>
               <h2 className="mt-4 lg:mt-3 2xl:mt-[10px] translate-x-6 text-sm sm:text-base 2xl:text-xl font-serif text-slate-600 tracking-wide hidingExp">{exp.year}</h2>
               <h1 className="translate-x-6 text-xl sm:text-2xl lg:text-xl 2xl:text-2xl font-outfit hidingExp">{exp.title}</h1>

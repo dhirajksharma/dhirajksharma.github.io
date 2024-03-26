@@ -2,7 +2,7 @@
     opacity: 0;
     filter: blur(23px);
     transform: translateY(-100%);
-    transition: all 1200ms;
+    transition: opacity 1200ms, filter 1200ms, transform 1200ms;
 }
 
 .showPrj{

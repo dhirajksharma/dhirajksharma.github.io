@@ -56,13 +56,13 @@ class Projects extends React.Component{
           }
           {
             projectData.map(prj => (
-              <div className="w-[90vw] lg:w-[70%] rounded-lg flex flex-col pl-3 my-5 sm:my-8 lg:mt-2 lg:mb-5 shadow shadow-gray-300 hidingPrj cursor-pointer"
+              <div className="w-[90vw] lg:w-[70%] rounded-xl flex flex-col pl-3 my-5 sm:my-8 lg:mt-2 lg:mb-5 shadow-md hover:shadow-xl border hidingPrj cursor-pointer"
                 onClick={()=>this.handleProjectDetailsToggle(prj.id)}>
                 
                 <div className="flex items-center justify-between pr-4 mt-4 mb-2 2xl:mb-3">
                   <img alt='project-thumbnail' src={prj.img} loading="eager" className="w-10 sm:w-14 lg:w-12 2xl:w-14 aspect-square rounded-md bg-gray-100"></img>
                   <a href={prj.link} target="_blank" rel="noreferrer" onClick={(e)=>e.stopPropagation()}>
-                    <FontAwesomeIcon icon={faArrowRight} className="text-xl lg:text-lg -rotate-45 text-blue-400 border-2 border-solid rounded-full py-[5px] px-[6px] border-blue-400 hover:rotate-[10]"/>
+                    <FontAwesomeIcon icon={faArrowRight} className="text-xl lg:text-lg -rotate-45 text-blue-400 border-2 border-solid rounded-full py-[5px] px-[6px] border-blue-400 hover:rotate-[10] transition-all"/>
                   </a>
                 </div>
                 
@@ -70,7 +70,7 @@ class Projects extends React.Component{
                 
                 <div className="flex w-[90%] flex-wrap">
                   {prj.tag.map(tg=>(
-                    <div className="mr-2 rounded-lg bg-slate-100 px-2 py-1 text-sm mb-2 sm:text-base lg:text-sm 2xl:text-base lg:rounded-md sm:mt-1 lg:tracking-wide">{tg}</div>
+                    <div className="mr-2 rounded-lg hover:bg-slate-200 bg-slate-100 px-2 py-1 text-sm mb-2 sm:text-base lg:text-sm 2xl:text-base lg:rounded-md sm:mt-1 lg:tracking-wide">{tg}</div>
                     ))
                   }
                 </div>

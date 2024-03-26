@@ -1,9 +1,23 @@
 export const projectData=[
     {
+        id:"collabchain",
+        img:"https://drive.google.com/thumbnail?id=1m-ItCCRfvphW4Ltfl3_4ldEw8L45uI6C",
+        cover:"https://img.freepik.com/free-vector/construction-landing-page_52683-10540.jpg?t=st=1711437787~exp=1711441387~hmac=e6d28bbd4aff8e837b23e74f554ce4d3ecff5a813149e716b79f018dbffad78e&w=740",
+        tag:["Solidity", "MongoDB", "Node.JS", "React.JS"],
+        link:"",
+        title:"Collab Chain",
+        intro:"Welcome to Collab Chain, an online platform for researchers all across the world to collaborate on any research work, manage their resources, all with the security of blockchain technology.",
+        insp:"Collabchain is my final year project for B.Tech, where I am working in a team of four. The idea for developing such a platform came from a team member who was inspired by the convinience platforms like Github, Gitlab, etc provide for collaboration among devs and aspired to do something similar for the research community.",
+        jrny:[
+            "More on it soon...",
+        ],
+        chal:"Curabitur rhoncus posuere turpis, eget dignissim urna interdum vitae. Donec malesuada, nisl ac tincidunt mollis, mauris erat gravida erat, quis commodo magna nisi eget nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut sit amet odio et tortor dictum elementum at sed risus. Vivamus eget dui commodo, fermentum quam vitae, elementum eros. Vivamus eget nisi dictum, scelerisque purus eget, dictum orci. Quisque fringilla aliquet ligula, eget eleifend leo ullamcorper ut. Nulla scelerisque consequat suscipit. Curabitur mattis leo erat. Praesent sed tortor ultrices orci vulputate faucibus. Fusce laoreet purus non sem euismod, vel ornare augue accumsan. Phasellus quis finibus diam."
+    },
+    {
         id:"lorestore",
         img:"https://github.com/dhirajksharma/thelorestore-frontend/blob/main/public/android-chrome-192x192.png?raw=true",
         cover:"https://github.com/dhirajksharma/thelorestore-frontend/blob/main/public/thelorestore_thumbnail.jpeg?raw=true",
-        tag:["MongoDB", "Express.JS", "React.JS", "TailwindCSS"],
+        tag:["MongoDB", "Node.JS", "React.JS", "TailwindCSS"],
         link:"https://thelorestore.vercel.app/",
         title:"The Lore Store",
         intro:"Introducing Lore Store, an engaging online book store where readers can explore an extensive collection of literary treasures. With a user-friendly interface, seamless navigation, and secure transactions via Stripe, Lore Store offers an immersive browsing experience. Embark on a journey through captivating narratives and discover your next literary adventure at Lore Store today.",
