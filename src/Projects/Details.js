@@ -68,7 +68,7 @@ class Details extends React.Component{
                   btn.classList.add('-translate-y-28', 'opacity-0');
                   this.props.handleProjectDetailsToggle(this.props.prjid)
                 }}
-                className="font-outfit z-10 bg-gray-800 shadow-[0px_0px_15px_5px] shadow-gray-400 hover:shadow-gray-200 text-white hover:bg-gray-200 hover:text-black px-4 py-2 text-2xl rounded-full lg:mx-2 fixed top-14 opacity-0 -translate-y-28 transition-opacity transition-transform ease-out duration-1000">
+                className="font-outfit z-10 bg-gray-800 shadow-[0px_0px_15px_5px] shadow-gray-300 hover:shadow-gray-200 text-white hover:bg-gray-200 hover:text-black px-4 py-2 text-2xl rounded-full lg:mx-2 fixed top-14 opacity-0 -translate-y-28 transition-opacity transition-transform ease-out duration-1000">
                   X
               </button>
 
