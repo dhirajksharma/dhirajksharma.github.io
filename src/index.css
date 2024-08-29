@@ -23,7 +23,7 @@
     }
 
     .socialinks {
-        @apply mx-1 sm:mx-[0.3rem] lg:hover:text-blue-400 lg:hover:bg-slate-50 lg:hover:border-blue-400 active:bg-slate-100 transition-all border border-gray-600 rounded-full w-6 h-6 p-[10px] sm:w-9 sm:h-9 sm:p-4 lg:w-6 lg:h-6 lg:p-[10px] 2xl:w-7 2xl:h-7 2xl:p-3;
+        @apply mx-1 sm:mx-[0.3rem] lg:hover:text-blue-400 lg:hover:bg-slate-50 lg:hover:border-blue-400 active:bg-slate-100 transition-all border border-gray-600 rounded-full w-6 h-6 p-[10px] sm:w-7 sm:h-7 sm:p-4 lg:w-6 lg:h-6 lg:p-[10px] 2xl:w-7 2xl:h-7 2xl:p-3;
     }
 
     .childrenDiv{

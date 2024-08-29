@@ -44,7 +44,7 @@ render(){
               <h2 className="mt-4 lg:mt-3 2xl:mt-[10px] translate-x-6 text-sm sm:text-base 2xl:text-xl font-serif text-slate-600 tracking-wide hidingExp">{exp.year}</h2>
               <h1 className="translate-x-6 text-xl sm:text-2xl lg:text-xl 2xl:text-2xl font-outfit hidingExp">{exp.title}</h1>
               <h3 className="translate-x-6 sm:text-lg lg:text-base 2xl:text-lg font-outfit font-extralight italic hidingExp">{exp.location}</h3>
-              <p className="mt-2 translate-x-6 sm:text-lg lg:text-base 2xl:text-lg mb-4 font-montserrat w-[80vw] lg:w-[90%] text-justify hidingExp">{exp.details}</p>
+              <p className="mt-2 translate-x-6 sm:text-lg lg:text-base 2xl:text-lg mb-4 font-montserrat w-[80vw] md:w-[85vw] lg:w-[90%] text-justify hidingExp">{exp.details}</p>
             </div>
           ))
         }

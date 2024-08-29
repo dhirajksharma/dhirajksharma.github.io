@@ -59,7 +59,7 @@ class App extends React.Component {
 
             <div className="flex justify-between items-center pt-2 w-screen h-[80px] sm:h-[120px] lg:h-[70px] 2xl:h-[100px] lg:w-full">
               <h1 className="ml-5 sm:ml-6 mr-0 text-2xl sm:text-3xl lg:text-2xl 2xl:text-3xl font-bold font-outfit tracking-wider">Dhiraj</h1>
-              <h1 className="mr-5 sm:mr-6 ml-0 text-right sm:text-xl lg:text-base 2xl:text-2xl font-outfit font-light leading-5">Frontend Designer<br></br> & Developer</h1>
+              <h1 className="mr-5 sm:mr-6 ml-0 text-right sm:text-xl lg:text-base 2xl:text-2xl font-outfit font-light !leading-snug">System Engineer<br></br>Tata Counsultancy</h1>
             </div>
 
             <div id='' className="h-[calc(100dvh-140px)] sm:h-[calc(100dvh-200px)] lg:h-full w-screen lg:w-full overflow-scroll containerDiv">
@@ -78,11 +78,11 @@ class App extends React.Component {
             
             {
               (window.innerWidth < 1024 &&
-              <div id='bottom-nav' className="hidden bg-[#f9fbfe] px-4 rounded-t-2xl rounded-b-lg w-[95vw] h-[59px] sm:h-[80px] absolute bottom-0 lg:!hidden">
+              <div id='bottom-nav' className="hidden bg-[#f9fbfe] px-4 rounded-t-2xl rounded-b-lg w-[95vw] h-[59px] sm:h-[69px] absolute bottom-0 lg:!hidden">
                       
                     <ul className="flex justify-evenly">
                       {menus.map((menu, i) => (
-                        <li key={i} className="w-16 sm:w-24">
+                        <li key={i} className="w-16">
                           <div
                           className={`rounded-b-2xl rounded-t-md ${i === this.state.activeTab && "bg-white"}`}>
                             <a

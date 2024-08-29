@@ -49,7 +49,7 @@ render(){
 
         <div className="abtPs flex">
           <h1 className="font-montserrat font-light text-lg 2xl:text-2xl text-justify mr-2 italic">ps:</h1>  
-          <p className="font-outfit font-light text-lg 2xl:text-2xl w-4/6 text-justify">I love to talk to people and share stories with them. Do checkout my blog for some. In the meantime, while you're here, allow me to regale you with my professional life.</p>
+          <p className="font-outfit font-light text-lg 2xl:text-2xl w-4/6 text-justify">I love to talk to people and share stories with them, so let me know if you're up for a chat. In the meantime, while you're here, allow me to regale you with my professional life.</p>
         </div>
       </div>
       </div>

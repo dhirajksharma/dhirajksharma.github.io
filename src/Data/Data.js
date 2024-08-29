@@ -52,12 +52,12 @@ export const projectData=[
 ]
 
 export const experienceData=[
-    // {
-    //     year:"2024-Present",
-    //     title:"System Engineer",
-    //     location:"Tata Consultancy Services",
-    //     details:""
-    // },
+    {
+        year:"2024-Present",
+        title:"System Engineer",
+        location:"Tata Consultancy Services",
+        details:""
+    },
     {
         year:"2022",
         title:"Adobe UX Foundation",
