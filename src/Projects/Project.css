@@ -22,3 +22,20 @@
 .hidingPrj:nth-child(4){
     transition-delay: 1800ms;
 }
+
+@media(min-width: 1080px){
+    .slick-prev::before, .slick-next::before{
+        color: black !important;
+      }
+  }
+
+.slick-slide{
+    transform: scale(0.90);
+    transition: all 400ms ease-in-out;
+    padding-bottom: 10px;
+}
+  
+.slick-center{
+    transform: scale(1);
+    opacity: 1;
+}

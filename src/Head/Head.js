@@ -97,7 +97,7 @@ class Head extends React.Component{
     render(){
         return (
             <div className="flex flex-col items-center justify-evenly h-full">
-                <div id="myface" className="blurred-img aspect-square rounded-md max-w-[65%] sm:max-w-[50%] hideFace">
+                <div id="myface" className="blurred-img aspect-square rounded-md max-w-[65%] sm:max-w-[50%] lg:max-w-[60%] hideFace">
                     <img alt='mypic' src={me} loading="eager" className="shadow-lg rounded-md shadow-slate-400"></img>
                 </div>
 
@@ -108,7 +108,7 @@ class Head extends React.Component{
                     }
                     An aspiring FrontEnd Developer, with particular interests in UI/UX design, and romantic comedies &#127871;
                     </p>
-                <p className="hideIntro text-center font-bold text-2xl sm:text-3xl lg:text-2xl 2xl:text-3xl sm:mt-6 lg:mt-0 2xl:mt-4 text-gray-700 font-comforter tracking-[.15rem]">@Kolkata, India</p>
+                <p className="hideIntro text-center font-bold text-2xl sm:text-3xl lg:text-2xl 2xl:text-3xl sm:mt-6 lg:mt-2 2xl:mt-4 text-gray-700 font-comforter tracking-[.15rem]">@Kolkata, India</p>
                 </div>
 
                 <div className="hideButton">

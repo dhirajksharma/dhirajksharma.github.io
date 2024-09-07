@@ -1,7 +1,7 @@
 export const projectData=[
     {
         id:"collabchain",
-        img:"https://drive.google.com/thumbnail?id=1m-ItCCRfvphW4Ltfl3_4ldEw8L45uI6C",
+        img:"https://github.com/dhirajksharma/collabchain/blob/main/frontend/public/logo.png?raw=true",
         cover:"https://img.freepik.com/free-vector/construction-landing-page_52683-10540.jpg?t=st=1711437787~exp=1711441387~hmac=e6d28bbd4aff8e837b23e74f554ce4d3ecff5a813149e716b79f018dbffad78e&w=740",
         tag:["Solidity", "MongoDB", "Node.JS", "React.JS"],
         link:"",
@@ -9,9 +9,18 @@ export const projectData=[
         intro:"Welcome to Collab Chain, an online platform for researchers all across the world to collaborate on any research work, manage their resources, all with the security of blockchain technology.",
         insp:"Collabchain is my final year project for B.Tech, where I am working in a team of four. The idea for developing such a platform came from a team member who was inspired by the convinience platforms like Github, Gitlab, etc provide for collaboration among devs and aspired to do something similar for the research community.",
         jrny:[
-            "More on it soon...",
+            "We divided the work amongst ourselves such that I was responsible for the backend of the system. We were using Node.js for the server coupled with MongoDB for all the database requirements and solidity to create a blockchain network that would maintain an authentic and immutable log of all the activities being performed by our users.",
+            "I had to learn how to write solidity code, and then design a code for contract that suited our requirements. Chatgpt did a lot of help, along with online learning resources, to solve conceptual doubts that I faced during the process. I even asked it to write a version of the contract that I could refer to, but one read through it with some dry run, and I realized the logic was hilariously flawed. Perhaps, there's still time in them replacing real developers. With my ethereum contract ready and tested, I moved on to building the central backend server.",
+            "Since, storage on blockchains is expensive we decided that the majority of the data like the user data and the project data will be stored on a central server, while the blockchain shall serve a small but crucial purpose of maintaining immutable log of all the happenings in the projects maintained using our platform. The way our application worked was, the backend would receive requests from the frontend, perform the logical operations required, manipulate the data and push a request to our contract on the chain to create a log if required. Maintaining the atomicity of the operations was of paramount importance, either both the backend and blockchain code runs as expected or none of it does.",
+            "Although I had previously worked on a backend application, my experience was very limited and so I was excited with this opportunity to enhance my learnings. While the structure of the code for the server application bore resemblance to my older application, there were many new additions like the introduction of Web3.js to interact with the smart contract, truffle for deployment of the said contract. Like any new project, this came with problems of its own, but reading through the docs helped a lot. No wonder everyone recommends them so much!",
+            "Earlier, I had worked majorly with the frontend of applications, and felt the backend a bit daunting but more so boring. But as I worked through this project, I realized it is an equally exciting domain to work, if not more, with its own challenges and thrills to offer."
         ],
-        chal:"Curabitur rhoncus posuere turpis, eget dignissim urna interdum vitae. Donec malesuada, nisl ac tincidunt mollis, mauris erat gravida erat, quis commodo magna nisi eget nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut sit amet odio et tortor dictum elementum at sed risus. Vivamus eget dui commodo, fermentum quam vitae, elementum eros. Vivamus eget nisi dictum, scelerisque purus eget, dictum orci. Quisque fringilla aliquet ligula, eget eleifend leo ullamcorper ut. Nulla scelerisque consequat suscipit. Curabitur mattis leo erat. Praesent sed tortor ultrices orci vulputate faucibus. Fusce laoreet purus non sem euismod, vel ornare augue accumsan. Phasellus quis finibus diam."
+        carousel:[
+            "https://img.freepik.com/free-vector/construction-landing-page_52683-10540.jpg?t=st=1711437787~exp=1711441387~hmac=e6d28bbd4aff8e837b23e74f554ce4d3ecff5a813149e716b79f018dbffad78e&w=740",
+            "https://img.freepik.com/free-vector/construction-landing-page_52683-10540.jpg?t=st=1711437787~exp=1711441387~hmac=e6d28bbd4aff8e837b23e74f554ce4d3ecff5a813149e716b79f018dbffad78e&w=740",
+            "https://img.freepik.com/free-vector/construction-landing-page_52683-10540.jpg?t=st=1711437787~exp=1711441387~hmac=e6d28bbd4aff8e837b23e74f554ce4d3ecff5a813149e716b79f018dbffad78e&w=740",
+            "https://img.freepik.com/free-vector/construction-landing-page_52683-10540.jpg?t=st=1711437787~exp=1711441387~hmac=e6d28bbd4aff8e837b23e74f554ce4d3ecff5a813149e716b79f018dbffad78e&w=740",
+        ]
     },
     {
         id:"lorestore",
@@ -29,7 +38,11 @@ export const projectData=[
             "Once a significant portion of the backend was completed, I shifted my focus to frontend development. I chose React to build the frontend and utilized Redux for state management and data sharing between components. To design the user interface, I sought inspiration from platforms like Dribbble, opting for a minimalistic and straightforward approach. I must admit that compared to backend development, frontend work required significantly more time and effort. The frontend development phase took me more than twice as long as the backend phase.",
             "Overall, the development process alone took approximately one and a half months. Some features proved more challenging to implement than others, and certain aspects had to be adjusted due to deadline constraints. Nevertheless, I was able to bring the project close to its initial plan. Upon deploying the finished work, I realized the complexities involved in integrating the frontend and backend seamlessly. Managing states during fetch requests and handling communication failures between the two servers were critical considerations. Neglecting these aspects could result in a system failure. This experience further deepened my appreciation for the tremendous effort developers put into running and maintaining massive platforms like Amazon and Flipkart.",
         ],
-        chal:"Curabitur rhoncus posuere turpis, eget dignissim urna interdum vitae. Donec malesuada, nisl ac tincidunt mollis, mauris erat gravida erat, quis commodo magna nisi eget nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut sit amet odio et tortor dictum elementum at sed risus. Vivamus eget dui commodo, fermentum quam vitae, elementum eros. Vivamus eget nisi dictum, scelerisque purus eget, dictum orci. Quisque fringilla aliquet ligula, eget eleifend leo ullamcorper ut. Nulla scelerisque consequat suscipit. Curabitur mattis leo erat. Praesent sed tortor ultrices orci vulputate faucibus. Fusce laoreet purus non sem euismod, vel ornare augue accumsan. Phasellus quis finibus diam."
+        carousel:[
+            "https://github.com/dhirajksharma/thelorestore-frontend/blob/main/public/thelorestore_thumbnail.jpeg?raw=true",
+            "https://github.com/dhirajksharma/thelorestore-frontend/blob/main/public/thelorestore_thumbnail.jpeg?raw=true",
+            "https://github.com/dhirajksharma/thelorestore-frontend/blob/main/public/thelorestore_thumbnail.jpeg?raw=true",
+        ]
     },
     {
         id:"psreact",
@@ -47,7 +60,10 @@ export const projectData=[
             "When I initially deployed the application, the user interface did not have an appeal to it and was not up to my satisfaction. Every time I opened the site, it bothered me. Almost a year later, I had an epiphany—I should adopt a Tinder-like cards layout. Swipe left, swipe right—simple and intuitive. However, I soon realized that this approach would not be ideal if a user wanted to revisit a game card after going through all five games. The Tinder-style approach wouldn't allow for that. So, I decided to implement a carousel of cards instead. Equipped with a better understanding of UI layouts, font pairing, color combinations, and the use of Tailwind CSS, I completely revamped the site to its current state.",
             "In the end, when I finally deployed the new version of the site, I felt a sense of accomplishment and pride in how far I had come. I could literally see the progress I had made. This, I believe, is a crucial aspect of being a developer or any artist in general—you learn, practice, and continually improve. It's an iterative process where you constantly refine your work."
         ],
-        chal:"Curabitur rhoncus posuere turpis, eget dignissim urna interdum vitae. Donec malesuada, nisl ac tincidunt mollis, mauris erat gravida erat, quis commodo magna nisi eget nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut sit amet odio et tortor dictum elementum at sed risus. Vivamus eget dui commodo, fermentum quam vitae, elementum eros. Vivamus eget nisi dictum, scelerisque purus eget, dictum orci. Quisque fringilla aliquet ligula, eget eleifend leo ullamcorper ut. Nulla scelerisque consequat suscipit. Curabitur mattis leo erat. Praesent sed tortor ultrices orci vulputate faucibus. Fusce laoreet purus non sem euismod, vel ornare augue accumsan. Phasellus quis finibus diam."
+        carousel:[
+            "https://github.com/dhirajksharma/reactgames/blob/main/public/psreact_thumbnail.jpeg?raw=true",
+            "https://github.com/dhirajksharma/reactgames/blob/main/public/psreact_thumbnail.jpeg?raw=true",
+        ]
     },
 ]
 

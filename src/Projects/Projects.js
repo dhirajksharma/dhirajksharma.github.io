@@ -64,7 +64,7 @@ class Projects extends React.Component{
 
         {
           projectData.map(prj =>(
-            <Details prjid={prj.id} prjcover={prj.cover} prjimg={prj.img} prjtitle={prj.title} prjintro={prj.intro} prjinsp={prj.insp} prjjrny={prj.jrny} handleProjectDetailsToggle={this.handleProjectDetailsToggle}/>
+            <Details prjid={prj.id} prjcover={prj.cover} prjimg={prj.img} prjtitle={prj.title} prjintro={prj.intro} prjinsp={prj.insp} prjjrny={prj.jrny} prjcarousel={prj.carousel} handleProjectDetailsToggle={this.handleProjectDetailsToggle}/>
           ))
         }
       </div>

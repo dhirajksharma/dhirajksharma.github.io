@@ -1,4 +1,8 @@
 import React from "react";
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 class Details extends React.Component{
     constructor(props){
@@ -28,6 +32,10 @@ class Details extends React.Component{
     }
     
     handleTouchMove(event) {
+      var nonscrollableElement = document.getElementById(`notscrollable-${this.props.prjid}`);
+      if(nonscrollableElement.contains(event.target))
+          return;
+      
       var deltaY = event.touches[0].clientY - this.touchStartY;
       if (Math.abs(deltaY) > 19) { // adjust the threshold as needed
         this.checkScrollDirection({ deltaY: deltaY });
@@ -59,6 +67,17 @@ class Details extends React.Component{
     }
     
     render(){
+      const sliderSettings = {
+        arrows:true,
+        className: "center",
+        infinite: true,
+        centerPadding: `${window.innerWidth <1024 ? "0px": "60px"}`,
+        centerMode: true,
+        slidesToShow: 1,
+        dots:true,
+        speed: 500,
+      };
+
         return (
             <div id={this.props.prjid} className="w-[95vw] lg:w-full hidden flex-col items-center overflow-hidden">
               <button
@@ -68,7 +87,7 @@ class Details extends React.Component{
                   btn.classList.add('-translate-y-28', 'opacity-0');
                   this.props.handleProjectDetailsToggle(this.props.prjid)
                 }}
-                className="font-outfit z-10 bg-gray-800 shadow-[0px_0px_15px_5px] shadow-gray-300 hover:shadow-gray-200 text-white hover:bg-gray-200 hover:text-black px-4 py-2 text-2xl rounded-full lg:mx-2 fixed top-14 opacity-0 -translate-y-28 transition-opacity transition-transform ease-out duration-1000">
+                className="font-outfit z-10 bg-gray-800 shadow-[0px_0px_15px_5px] shadow-gray-300 hover:shadow-gray-200 text-white hover:bg-gray-200 hover:text-black px-4 py-2 text-2xl rounded-full lg:mx-2 fixed top-14 opacity-0 -translate-y-28 opacity transition-transform ease-out duration-1000">
                   X
               </button>
 
@@ -87,7 +106,23 @@ class Details extends React.Component{
                   <img alt='project-cover' src={this.props.prjcover} className="hidden lg:block w-4/5 mx-auto my-3 rounded-lg"></img>
                   <h2 className="mt-1 -mb-3 sm:mt-2 lg:mt-4 sm:text-xl lg:text-base 2xl:text-xl font-outfit font-medium tracking-wide lg:tracking-wider">Journey</h2>
                   {
-                    this.props.prjjrny.map(para=>(
+                    this.props.prjjrny.slice(0, 2).map(para=>(
+                      <p className="font-montserrat text-justify text-sm my-3 sm:text-base 2xl:text-lg lg:tracking-wide">{para}</p>
+                    ))
+                  }
+                  
+                  <div id={`notscrollable-${this.props.prjid}`} className="mx-auto lg:w-5/6">
+                  <Slider {...sliderSettings}>
+                    {this.props.prjcarousel.map((imgsrc) =>
+                        <div className="w-[90vw] lg:w-auto">
+                          <img alt='project-samples' src={imgsrc} className="rounded-lg w-[90vw] lg:w-auto"></img>
+                        </div>
+                      )}
+                  </Slider>
+                  </div>
+                  <br></br>
+                  {
+                    this.props.prjjrny.slice(2).map(para=>(
                       <p className="font-montserrat text-justify text-sm my-3 sm:text-base 2xl:text-lg lg:tracking-wide">{para}</p>
                     ))
                   }
