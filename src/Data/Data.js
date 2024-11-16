@@ -2,7 +2,7 @@ export const projectData=[
     {
         id:"collabchain",
         img:"https://github.com/dhirajksharma/collabchain/blob/main/frontend/public/logo.png?raw=true",
-        cover:"https://img.freepik.com/free-vector/construction-landing-page_52683-10540.jpg?t=st=1711437787~exp=1711441387~hmac=e6d28bbd4aff8e837b23e74f554ce4d3ecff5a813149e716b79f018dbffad78e&w=740",
+        cover:"https://raw.githubusercontent.com/dhirajksharma/collabchain/refs/heads/main/frontend/public/thumbnail.png",
         tag:["Solidity", "MongoDB", "Node.JS", "React.JS"],
         link:"",
         title:"Collab Chain",
@@ -24,8 +24,8 @@ export const projectData=[
     },
     {
         id:"lorestore",
-        img:"https://github.com/dhirajksharma/thelorestore-frontend/blob/main/public/android-chrome-192x192.png?raw=true",
-        cover:"https://github.com/dhirajksharma/thelorestore-frontend/blob/main/public/thelorestore_thumbnail.jpeg?raw=true",
+        img:"https://github.com/dhirajksharma/lorestore/blob/main/frontend/public/android-chrome-192x192.png?raw=true",
+        cover:"https://github.com/dhirajksharma/lorestore/blob/main/frontend/public/thelorestore_thumbnail.jpeg?raw=true",
         tag:["MongoDB", "Node.JS", "React.JS", "TailwindCSS"],
         link:"https://thelorestore.vercel.app/",
         title:"The Lore Store",
@@ -39,9 +39,9 @@ export const projectData=[
             "Overall, the development process alone took approximately one and a half months. Some features proved more challenging to implement than others, and certain aspects had to be adjusted due to deadline constraints. Nevertheless, I was able to bring the project close to its initial plan. Upon deploying the finished work, I realized the complexities involved in integrating the frontend and backend seamlessly. Managing states during fetch requests and handling communication failures between the two servers were critical considerations. Neglecting these aspects could result in a system failure. This experience further deepened my appreciation for the tremendous effort developers put into running and maintaining massive platforms like Amazon and Flipkart.",
         ],
         carousel:[
-            "https://github.com/dhirajksharma/thelorestore-frontend/blob/main/public/thelorestore_thumbnail.jpeg?raw=true",
-            "https://github.com/dhirajksharma/thelorestore-frontend/blob/main/public/thelorestore_thumbnail.jpeg?raw=true",
-            "https://github.com/dhirajksharma/thelorestore-frontend/blob/main/public/thelorestore_thumbnail.jpeg?raw=true",
+            "https://github.com/dhirajksharma/lorestore/blob/main/frontend/public/thelorestore_thumbnail.jpeg?raw=true",
+            "https://github.com/dhirajksharma/lorestore/blob/main/frontend/public/thelorestore_thumbnail.jpeg?raw=true",
+            "https://github.com/dhirajksharma/lorestore/blob/main/frontend/public/thelorestore_thumbnail.jpeg?raw=true",
         ]
     },
     {
@@ -68,12 +68,12 @@ export const projectData=[
 ]
 
 export const experienceData=[
-    {
-        year:"2024-Present",
-        title:"System Engineer",
-        location:"Tata Consultancy Services",
-        details:""
-    },
+    // {
+    //     year:"2024-Present",
+    //     title:"System Engineer",
+    //     location:"Tata Consultancy Services",
+    //     details:""
+    // },
     {
         year:"2022",
         title:"Adobe UX Foundation",

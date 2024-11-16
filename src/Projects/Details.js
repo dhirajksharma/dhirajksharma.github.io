@@ -106,12 +106,12 @@ class Details extends React.Component{
                   <img alt='project-cover' src={this.props.prjcover} className="hidden lg:block w-4/5 mx-auto my-3 rounded-lg"></img>
                   <h2 className="mt-1 -mb-3 sm:mt-2 lg:mt-4 sm:text-xl lg:text-base 2xl:text-xl font-outfit font-medium tracking-wide lg:tracking-wider">Journey</h2>
                   {
-                    this.props.prjjrny.slice(0, 2).map(para=>(
+                    this.props.prjjrny.map(para=>(
                       <p className="font-montserrat text-justify text-sm my-3 sm:text-base 2xl:text-lg lg:tracking-wide">{para}</p>
                     ))
                   }
                   
-                  <div id={`notscrollable-${this.props.prjid}`} className="mx-auto lg:w-5/6">
+                  {/* <div id={`notscrollable-${this.props.prjid}`} className="mx-auto lg:w-5/6">
                   <Slider {...sliderSettings}>
                     {this.props.prjcarousel.map((imgsrc) =>
                         <div className="w-[90vw] lg:w-auto">
@@ -119,13 +119,13 @@ class Details extends React.Component{
                         </div>
                       )}
                   </Slider>
-                  </div>
+                  </div> */}
                   <br></br>
-                  {
+                  {/* {
                     this.props.prjjrny.slice(2).map(para=>(
                       <p className="font-montserrat text-justify text-sm my-3 sm:text-base 2xl:text-lg lg:tracking-wide">{para}</p>
                     ))
-                  }
+                  } */}
                 </div>
               </div>
         )
