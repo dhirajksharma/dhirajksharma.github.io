@@ -3,7 +3,6 @@ import $ from "jquery";
 import './Project.css';
 import {projectData} from "../Data/Data";
 import Cards from "./Cards";
-import Details from "./Details";
 
 class Projects extends React.Component{
     constructor(props) {
@@ -56,17 +55,21 @@ class Projects extends React.Component{
           }
           {
             projectData.map(prj => (
-              <Cards prjid={prj.id} prjimg={prj.img} prjtitle={prj.title} prjtag={prj.tag} prjintro={prj.intro} handleProjectDetailsToggle={this.handleProjectDetailsToggle}/>
+              <Cards
+                prjid={prj.id}
+                prjimg={prj.img}
+                prjtitle={prj.title}
+                prjtag={prj.tag}
+                prjintro={prj.intro}
+                prjjrny={prj.jrny}
+                prjcover={prj.cover}
+                prjinsp={prj.insp}
+                prjcarousel={prj.carousel}
+              />
             ))
           }
 
         </div>
-
-        {
-          projectData.map(prj =>(
-            <Details prjid={prj.id} prjcover={prj.cover} prjimg={prj.img} prjtitle={prj.title} prjintro={prj.intro} prjinsp={prj.insp} prjjrny={prj.jrny} prjcarousel={prj.carousel} handleProjectDetailsToggle={this.handleProjectDetailsToggle}/>
-          ))
-        }
       </div>
       )
     }

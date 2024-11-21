@@ -51,7 +51,7 @@ render(){
 
         {
           (window.innerWidth >= 1024 &&
-            <div className="flex justify-end w-[85%]">
+            <div className="flex justify-end w-[85%] mb-2">
             <a href="https://drive.google.com/file/d/19wB-lSbnTzGX7PNaIWRLbImAuQiZIML3/view" target="_blank" rel="noreferrer">
               <button
                   className="bg-white border-2 border-blue-300 hover:bg-blue-300 py-2 my-4 2xl:text-lg rounded-full font-montserrat w-[200px] flex justify-center items-center mt-4 mb-2 2xl:w-[250px] expBtn">
